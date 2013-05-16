@@ -9,4 +9,5 @@ read_verilog -container i -libname WORK -01 output/synth.v
 set_top i:/WORK/usb_phy
 
 verify
+exit
 

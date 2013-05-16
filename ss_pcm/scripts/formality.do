@@ -9,4 +9,5 @@ read_verilog -container i -libname WORK -01 output/synth.v
 set_top i:/WORK/pcm_slv_top
 
 verify
+exit
 

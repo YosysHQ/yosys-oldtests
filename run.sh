@@ -37,10 +37,19 @@ case "$mode" in
 	fm)
 		for t in $list; do
 			cd $t
-			echo; echo "** Running Formality for $t.."
-			fm_shell -64 -file scripts/formality.do 2>&1 | tee output/formality.log
+			echo "** Running Formality for $t.."
+			fm_shell -64 -file scripts/formality.do > output/formality.log 2>&1
+			rm -rf FM_WORK* {fm_shell_command,formality}*.{log,lck}
 			cd ..
 		done
+		echo; echo
+		for t in $list; do
+			echo -e "$t\\t$( egrep '^Verification (SUCCEEDED|FAILED)' $t/output/formality.log; )"
+		done | expand -t15
+		echo; echo
+		;;
+
+	fm-status)
 		echo; echo
 		for t in $list; do
 			echo -e "$t\\t$( egrep '^Verification (SUCCEEDED|FAILED)' $t/output/formality.log; )"
