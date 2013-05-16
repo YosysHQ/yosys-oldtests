@@ -1332,19 +1332,19 @@ Finding unused cells or wires in module \sasc_top..
 
 12. Executing ABC pass (technology mapping using ABC).
 
-12.1. Extracting gate logic of module `\sasc_fifo4' to `/tmp/yosys-abc-7rHMMt/input.v'..
+12.1. Extracting gate logic of module `\sasc_fifo4' to `/tmp/yosys-abc-RlHSTv/input.v'..
 Extracted 110 gates and 162 wires to a logic network with 49 inputs and 47 outputs.
 
 12.1.1. Executing ABC.
-ABC: ABC command line: "read_verilog /tmp/yosys-abc-7rHMMt/input.v; read_library /tmp/yosys-abc-7rHMMt/stdcells.genlib; map; write_verilog /tmp/yosys-abc-7rHMMt/output.v".
+ABC: ABC command line: "read_verilog /tmp/yosys-abc-RlHSTv/input.v; read_library /tmp/yosys-abc-RlHSTv/stdcells.genlib; map; write_verilog /tmp/yosys-abc-RlHSTv/output.v".
 ABC: There is no hierarchy information.
 ABC: The number of gates read = 8.
-ABC: Read 8 gates from file "/tmp/yosys-abc-7rHMMt/stdcells.genlib".
+ABC: Read 8 gates from file "/tmp/yosys-abc-RlHSTv/stdcells.genlib".
 ABC: Selected 8 functionally unique gates. Time =     0.00 sec
 ABC: Created 4 rules and 4 matches. Time =     0.00 sec
 ABC: Warning: The network was strashed and balanced before mapping.
-ABC: A simple supergate library is derived from gate library "/tmp/yosys-abc-7rHMMt/stdcells.genlib".
-ABC: Loaded 9 unique 5-input supergates from "/tmp/yosys-abc-7rHMMt/stdcells.super".  Time =     0.00 sec
+ABC: A simple supergate library is derived from gate library "/tmp/yosys-abc-RlHSTv/stdcells.genlib".
+ABC: Loaded 9 unique 5-input supergates from "/tmp/yosys-abc-RlHSTv/stdcells.super".  Time =     0.00 sec
 
 12.1.2. Re-integrating ABC results.
 ABC RESULTS:               AND cells:       25
@@ -1356,27 +1356,27 @@ ABC RESULTS:        internal signals:       66
 ABC RESULTS:           input signals:       49
 ABC RESULTS:          output signals:       47
 
-12.1.3. Removing temp directory `/tmp/yosys-abc-7rHMMt':
-Removing `/tmp/yosys-abc-7rHMMt/input.v'.
-Removing `/tmp/yosys-abc-7rHMMt/output.v'.
-Removing `/tmp/yosys-abc-7rHMMt/stdcells.genlib'.
-Removing `/tmp/yosys-abc-7rHMMt/stdcells.genlib_temp'.
-Removing `/tmp/yosys-abc-7rHMMt/stdcells.super'.
-Removing `/tmp/yosys-abc-7rHMMt'.
+12.1.3. Removing temp directory `/tmp/yosys-abc-RlHSTv':
+Removing `/tmp/yosys-abc-RlHSTv/input.v'.
+Removing `/tmp/yosys-abc-RlHSTv/output.v'.
+Removing `/tmp/yosys-abc-RlHSTv/stdcells.genlib'.
+Removing `/tmp/yosys-abc-RlHSTv/stdcells.genlib_temp'.
+Removing `/tmp/yosys-abc-RlHSTv/stdcells.super'.
+Removing `/tmp/yosys-abc-RlHSTv'.
 
-12.2. Extracting gate logic of module `\sasc_top' to `/tmp/yosys-abc-6Do7OU/input.v'..
+12.2. Extracting gate logic of module `\sasc_top' to `/tmp/yosys-abc-Tm8VUu/input.v'..
 Extracted 131 gates and 189 wires to a logic network with 56 inputs and 40 outputs.
 
 12.2.1. Executing ABC.
-ABC: ABC command line: "read_verilog /tmp/yosys-abc-6Do7OU/input.v; read_library /tmp/yosys-abc-6Do7OU/stdcells.genlib; map; write_verilog /tmp/yosys-abc-6Do7OU/output.v".
+ABC: ABC command line: "read_verilog /tmp/yosys-abc-Tm8VUu/input.v; read_library /tmp/yosys-abc-Tm8VUu/stdcells.genlib; map; write_verilog /tmp/yosys-abc-Tm8VUu/output.v".
 ABC: There is no hierarchy information.
 ABC: The number of gates read = 8.
-ABC: Read 8 gates from file "/tmp/yosys-abc-6Do7OU/stdcells.genlib".
+ABC: Read 8 gates from file "/tmp/yosys-abc-Tm8VUu/stdcells.genlib".
 ABC: Selected 8 functionally unique gates. Time =     0.00 sec
 ABC: Created 4 rules and 4 matches. Time =     0.00 sec
 ABC: Warning: The network was strashed and balanced before mapping.
-ABC: A simple supergate library is derived from gate library "/tmp/yosys-abc-6Do7OU/stdcells.genlib".
-ABC: Loaded 9 unique 5-input supergates from "/tmp/yosys-abc-6Do7OU/stdcells.super".  Time =     0.00 sec
+ABC: A simple supergate library is derived from gate library "/tmp/yosys-abc-Tm8VUu/stdcells.genlib".
+ABC: Loaded 9 unique 5-input supergates from "/tmp/yosys-abc-Tm8VUu/stdcells.super".  Time =     0.00 sec
 
 12.2.2. Re-integrating ABC results.
 ABC RESULTS:               AND cells:       39
@@ -1388,13 +1388,13 @@ ABC RESULTS:        internal signals:       93
 ABC RESULTS:           input signals:       56
 ABC RESULTS:          output signals:       40
 
-12.2.3. Removing temp directory `/tmp/yosys-abc-6Do7OU':
-Removing `/tmp/yosys-abc-6Do7OU/input.v'.
-Removing `/tmp/yosys-abc-6Do7OU/output.v'.
-Removing `/tmp/yosys-abc-6Do7OU/stdcells.genlib'.
-Removing `/tmp/yosys-abc-6Do7OU/stdcells.genlib_temp'.
-Removing `/tmp/yosys-abc-6Do7OU/stdcells.super'.
-Removing `/tmp/yosys-abc-6Do7OU'.
+12.2.3. Removing temp directory `/tmp/yosys-abc-Tm8VUu':
+Removing `/tmp/yosys-abc-Tm8VUu/input.v'.
+Removing `/tmp/yosys-abc-Tm8VUu/output.v'.
+Removing `/tmp/yosys-abc-Tm8VUu/stdcells.genlib'.
+Removing `/tmp/yosys-abc-Tm8VUu/stdcells.genlib_temp'.
+Removing `/tmp/yosys-abc-Tm8VUu/stdcells.super'.
+Removing `/tmp/yosys-abc-Tm8VUu'.
 
 13. Executing OPT pass (performing simple optimizations).
 

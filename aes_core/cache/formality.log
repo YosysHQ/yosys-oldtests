@@ -16,7 +16,7 @@ controlling such use and disclosure.
    * Please refer to the Formality Release Notes for details and additional enhancements
 
 Hostname: morpheus2 (amd64)
-Current time: Thu May 16 15:05:34 2013
+Current time: Thu May 16 16:48:14 2013
 
 Loading db file '/opt/eda/iac/tools/fm/2009_06/libraries/syn/gtech.db'
 set hdlin_ignore_full_case false
@@ -89,48 +89,23 @@ Unmatched Objects                                                        REF    
 
     Info:  Formality Guide Files (SVF) can improve matching performance and success by automating setup.
 Status:  Verifying...
-    Compare point sa13_reg[6] failed (is not equivalent)
-    Compare point sa33_reg[3] failed (is not equivalent)
-    Compare point sa33_reg[4] failed (is not equivalent)
-    Compare point sa33_reg[6] failed (is not equivalent)
-    Compare point sa13_reg[4] failed (is not equivalent)
-    Compare point sa23_reg[3] failed (is not equivalent)
-    Compare point sa23_reg[5] failed (is not equivalent)
-    Compare point sa23_reg[2] failed (is not equivalent)
-    Compare point sa33_reg[2] failed (is not equivalent)
-    Compare point sa33_reg[1] failed (is not equivalent)
-    Compare point sa33_reg[5] failed (is not equivalent)
-    Compare point sa23_reg[6] failed (is not equivalent)
-    Compare point sa13_reg[3] failed (is not equivalent)
-    Compare point sa33_reg[7] failed (is not equivalent)
-    Compare point sa23_reg[4] failed (is not equivalent)
-    Compare point sa13_reg[2] failed (is not equivalent)
-    Compare point sa13_reg[5] failed (is not equivalent)
-    Compare point sa23_reg[7] failed (is not equivalent)
-    Compare point sa23_reg[0] failed (is not equivalent)
-    Compare point sa13_reg[7] failed (is not equivalent)
 
 ********************************* Verification Results *********************************
-Verification FAILED
--------------------
+Verification SUCCEEDED
+----------------------
  Reference design: r:/WORK/aes_cipher_top
  Implementation design: i:/WORK/aes_cipher_top
- 456 Passing compare points
- 20 Failing compare points
- 0 Aborted compare points
- 183 Unverified compare points
+ 659 Passing compare points
 ----------------------------------------------------------------------------------------
 Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
 ----------------------------------------------------------------------------------------
-Passing (equivalent)           0       0       0       0     129     327       0     456
-Failing (not equivalent)       0       0       0       0       0      20       0      20
-Unverified                     0       0       0       0       0     183       0     183
+Passing (equivalent)           0       0       0       0     129     530       0     659
+Failing (not equivalent)       0       0       0       0       0       0       0       0
 ****************************************************************************************
-Info:  Formality Guide Files (SVF) can improve verification success by automating setup.
-0
+1
 exit
 
-Maximum memory usage for this session: 123500 KB
-CPU usage for this session: 43.78 seconds
+Maximum memory usage for this session: 129600 KB
+CPU usage for this session: 39.23 seconds
 
 Thank you for using Formality (R)!
