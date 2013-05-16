@@ -71,6 +71,22 @@ case "$mode" in
 		done
 		;;
 
+	rsync-to)
+		if [ -n "$RSYNC_YOSYS_TESTS_REMOTE" ]; then
+			( eval "set -x; rsync -avz --delete . $RSYNC_YOSYS_TESTS_REMOTE"; )
+		else
+			echo 'Environment variable $RSYNC_YOSYS_TESTS_REMOTE not set!'
+		fi
+		;;
+
+	rsync-from)
+		if [ -n "$RSYNC_YOSYS_TESTS_REMOTE" ]; then
+			( eval "set -x; rsync -avz --delete $RSYNC_YOSYS_TESTS_REMOTE ."; )
+		else
+			echo 'Environment variable $RSYNC_YOSYS_TESTS_REMOTE not set!'
+		fi
+		;;
+
 	clean)
 		for t in $list; do
 			rm -rvf $t/output
