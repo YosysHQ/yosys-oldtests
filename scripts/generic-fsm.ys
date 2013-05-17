@@ -4,6 +4,8 @@ proc
 opt
 memory
 opt
+fsm -fm_set_fsm_file output/fsm_info.txt
+opt
 techmap
 opt
 abc

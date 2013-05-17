@@ -1,1 +1,11 @@
-script ../scripts/generic-no-fsm.ys
+
+hierarchy
+proc
+opt
+memory
+opt
+techmap
+opt
+abc
+opt
+
