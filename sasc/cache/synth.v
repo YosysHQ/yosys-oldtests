@@ -1,10 +1,6 @@
-(* src = "rtl/sasc_fifo4.v:63" *)
 module sasc_fifo4(clk, rst, clr, din, we, dout, re, full, empty);
-  (* src = "rtl/sasc_fifo4.v:124" *)
   wire _000_;
-  (* src = "rtl/sasc_fifo4.v:103" *)
   wire [1:0] _001_;
-  (* src = "rtl/sasc_fifo4.v:93" *)
   wire [1:0] _002_;
   wire _003_;
   wire _004_;
@@ -67,41 +63,25 @@ module sasc_fifo4(clk, rst, clr, din, we, dout, re, full, empty);
   wire _061_;
   wire _062_;
   wire _063_;
-  (* src = "<stdcells.v>:1169" *)
   wire [7:0] _064_;
-  (* src = "<stdcells.v>:1169" *)
   wire [7:0] _065_;
-  (* src = "<stdcells.v>:1169" *)
   wire [7:0] _066_;
-  (* src = "<stdcells.v>:1169" *)
   wire [7:0] _067_;
-  (* src = "rtl/sasc_fifo4.v:65" *)
   input clk;
-  (* src = "rtl/sasc_fifo4.v:66" *)
   input clr;
-  (* src = "rtl/sasc_fifo4.v:67" *)
   input [7:0] din;
-  (* src = "rtl/sasc_fifo4.v:69" *)
   output [7:0] dout;
-  (* src = "rtl/sasc_fifo4.v:71" *)
   output empty;
-  (* src = "rtl/sasc_fifo4.v:71" *)
   output full;
-  (* src = "rtl/sasc_fifo4.v:86" *)
   reg gb;
   reg [7:0] \mem[0] ;
   reg [7:0] \mem[1] ;
   reg [7:0] \mem[2] ;
   reg [7:0] \mem[3] ;
-  (* src = "rtl/sasc_fifo4.v:70" *)
   input re;
-  (* src = "rtl/sasc_fifo4.v:81" *)
   reg [1:0] rp;
-  (* src = "rtl/sasc_fifo4.v:65" *)
   input rst;
-  (* src = "rtl/sasc_fifo4.v:68" *)
   input we;
-  (* src = "rtl/sasc_fifo4.v:80" *)
   reg [1:0] wp;
   assign _060_ = ~gb;
   assign _061_ = ~rp[1];
@@ -211,124 +191,87 @@ module sasc_fifo4(clk, rst, clr, din, we, dout, re, full, empty);
   assign _002_[0] = _058_ & _039_;
   assign _059_ = _022_ ? wp[1] : _044_;
   assign _002_[1] = _059_ & _039_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[0] [0] <= _064_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[0] [1] <= _064_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[0] [2] <= _064_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[0] [3] <= _064_[3];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[0] [4] <= _064_[4];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[0] [5] <= _064_[5];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[0] [6] <= _064_[6];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[0] [7] <= _064_[7];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[1] [0] <= _065_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[1] [1] <= _065_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[1] [2] <= _065_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[1] [3] <= _065_[3];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[1] [4] <= _065_[4];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[1] [5] <= _065_[5];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[1] [6] <= _065_[6];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[1] [7] <= _065_[7];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[2] [0] <= _066_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[2] [1] <= _066_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[2] [2] <= _066_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[2] [3] <= _066_[3];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[2] [4] <= _066_[4];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[2] [5] <= _066_[5];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[2] [6] <= _066_[6];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[2] [7] <= _066_[7];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[3] [0] <= _067_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[3] [1] <= _067_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[3] [2] <= _067_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[3] [3] <= _067_[3];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[3] [4] <= _067_[4];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[3] [5] <= _067_[5];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[3] [6] <= _067_[6];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[3] [7] <= _067_[7];
-  (* src = "<stdcells.v>:1345" *)
   always @(posedge clk or negedge rst)
     if (!rst)
       rp[0] <= 0;
     else
       rp[0] <= _001_[0];
-  (* src = "<stdcells.v>:1345" *)
   always @(posedge clk or negedge rst)
     if (!rst)
       rp[1] <= 0;
     else
       rp[1] <= _001_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       gb <= _000_;
-  (* src = "<stdcells.v>:1345" *)
   always @(posedge clk or negedge rst)
     if (!rst)
       wp[0] <= 0;
     else
       wp[0] <= _002_[0];
-  (* src = "<stdcells.v>:1345" *)
   always @(posedge clk or negedge rst)
     if (!rst)
       wp[1] <= 0;
@@ -336,35 +279,20 @@ module sasc_fifo4(clk, rst, clr, din, we, dout, re, full, empty);
       wp[1] <= _002_[1];
 endmodule
 
-(* src = "rtl/sasc_top.v:73" *)
 module sasc_top(clk, rst, rxd_i, txd_o, cts_i, rts_o, sio_ce, sio_ce_x4, din_i, dout_o, re_i, we_i, full_o, empty_o);
-  (* src = "rtl/sasc_top.v:254" *)
   wire _000_;
-  (* src = "rtl/sasc_top.v:262" *)
   wire [1:0] _001_;
-  (* src = "rtl/sasc_top.v:176" *)
   wire [9:0] _002_;
-  (* src = "rtl/sasc_top.v:168" *)
   wire _003_;
-  (* src = "rtl/sasc_top.v:216" *)
   wire [3:0] _004_;
-  (* src = "rtl/sasc_top.v:223" *)
   wire _005_;
-  (* src = "rtl/sasc_top.v:296" *)
   wire _006_;
-  (* src = "rtl/sasc_top.v:226" *)
   wire _007_;
-  (* src = "rtl/sasc_top.v:234" *)
   wire [9:0] _008_;
-  (* src = "rtl/sasc_top.v:195" *)
   wire _009_;
-  (* src = "rtl/sasc_top.v:198" *)
   wire _010_;
-  (* src = "rtl/sasc_top.v:188" *)
   wire [3:0] _011_;
-  (* src = "rtl/sasc_top.v:181" *)
   wire _012_;
-  (* src = "rtl/sasc_top.v:163" *)
   wire _013_;
   wire _014_;
   wire _015_;
@@ -452,90 +380,52 @@ module sasc_top(clk, rst, rxd_i, txd_o, cts_i, rts_o, sio_ce, sio_ce_x4, din_i, 
   wire _097_;
   wire _098_;
   wire _099_;
-  (* src = "rtl/sasc_top.v:128" *)
   reg change;
-  (* src = "rtl/sasc_top.v:84" *)
   input clk;
-  (* src = "rtl/sasc_top.v:88" *)
   input cts_i;
-  (* src = "rtl/sasc_top.v:92" *)
   input [7:0] din_i;
-  (* src = "rtl/sasc_top.v:93" *)
   output [7:0] dout_o;
-  (* src = "rtl/sasc_top.v:130" *)
   reg [1:0] dpll_state;
-  (* src = "rtl/sasc_top.v:95" *)
   output empty_o;
-  (* src = "rtl/sasc_top.v:95" *)
   output full_o;
-  (* src = "rtl/sasc_top.v:110" *)
   reg [9:0] hold_reg;
-  (* src = "rtl/sasc_top.v:107" *)
   reg load;
-  (* src = "rtl/sasc_top.v:109" *)
   wire load_e;
-  (* src = "rtl/sasc_top.v:94" *)
   input re_i;
-  (* src = "rtl/sasc_top.v:85" *)
   input rst;
-  (* src = "rtl/sasc_top.v:89" *)
   output rts_o;
   reg rts_o;
-  (* src = "rtl/sasc_top.v:117" *)
   reg [3:0] rx_bit_cnt;
-  (* src = "rtl/sasc_top.v:118" *)
   reg rx_go;
-  (* src = "rtl/sasc_top.v:129" *)
   reg rx_sio_ce;
-  (* src = "rtl/sasc_top.v:129" *)
   wire rx_sio_ce_d;
-  (* src = "rtl/sasc_top.v:129" *)
   reg rx_sio_ce_r1;
-  (* src = "rtl/sasc_top.v:129" *)
   reg rx_sio_ce_r2;
-  (* src = "rtl/sasc_top.v:120" *)
   reg rx_valid;
-  (* src = "rtl/sasc_top.v:120" *)
   reg rx_valid_r;
-  (* src = "rtl/sasc_top.v:121" *)
   wire rx_we;
-  (* src = "rtl/sasc_top.v:86" *)
   input rxd_i;
-  (* src = "rtl/sasc_top.v:115" *)
   reg rxd_r;
-  (* src = "rtl/sasc_top.v:115" *)
   reg rxd_s;
-  (* src = "rtl/sasc_top.v:122" *)
   wire rxf_full;
-  (* src = "rtl/sasc_top.v:119" *)
   wire [9:0] rxr;
-  (* src = "rtl/sasc_top.v:113" *)
   reg shift_en;
-  (* src = "rtl/sasc_top.v:125" *)
   reg shift_en_r;
-  (* src = "rtl/sasc_top.v:90" *)
   input sio_ce;
-  (* src = "rtl/sasc_top.v:91" *)
   input sio_ce_x4;
-  (* src = "rtl/sasc_top.v:114" *)
   reg [3:0] tx_bit_cnt;
-  (* src = "rtl/sasc_top.v:87" *)
   output txd_o;
   reg txd_o;
-  (* src = "rtl/sasc_top.v:106" *)
   wire [7:0] txd_p;
-  (* src = "rtl/sasc_top.v:111" *)
   wire txf_empty;
-  (* src = "rtl/sasc_top.v:124" *)
   reg txf_empty_r;
-  (* src = "rtl/sasc_top.v:94" *)
   input we_i;
   assign _096_ = ~cts_i;
   assign _097_ = ~shift_en;
   assign _098_ = ~txf_empty_r;
   assign _099_ = _098_ & _097_;
   assign _003_ = _099_ & _096_;
-  assign load_e = sio_ce & load;
+  assign load_e = load & sio_ce;
   assign _014_ = ~rxf_full;
   assign _015_ = ~rx_valid_r;
   assign _016_ = _015_ & rx_valid;
@@ -591,7 +481,7 @@ module sasc_top(clk, rst, rxd_i, txd_o, cts_i, rts_o, sio_ce, sio_ce_x4, din_i, 
   assign _011_[3] = _048_ | _018_;
   assign _049_ = sio_ce ? shift_en : shift_en_r;
   assign _010_ = _049_ & rst;
-  assign _050_ = rx_sio_ce & rx_go;
+  assign _050_ = rx_go & rx_sio_ce;
   assign _051_ = _050_ ^ rx_bit_cnt[0];
   assign _052_ = ~rxd_r;
   assign _053_ = rxd_s | _052_;
@@ -622,7 +512,7 @@ module sasc_top(clk, rst, rxd_i, txd_o, cts_i, rts_o, sio_ce, sio_ce_x4, din_i, 
   assign _008_[9] = _050_ ? rxd_s : rxr[9];
   assign _067_ = rxd_s ^ rxd_r;
   assign _068_ = ~sio_ce_x4;
-  assign _069_ = _068_ & change;
+  assign _069_ = change & _068_;
   assign _070_ = _069_ | _067_;
   assign _000_ = _070_ & rst;
   assign _071_ = ~change;
@@ -656,158 +546,114 @@ module sasc_top(clk, rst, rxd_i, txd_o, cts_i, rts_o, sio_ce, sio_ce_x4, din_i, 
   assign _094_ = _086_ | rx_bit_cnt[0];
   assign _095_ = ~_089_;
   assign _005_ = _095_ | _094_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       txf_empty_r <= _013_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       load <= _003_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       hold_reg[0] <= _002_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       hold_reg[1] <= _002_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       hold_reg[2] <= _002_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       hold_reg[3] <= _002_[3];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       hold_reg[4] <= _002_[4];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       hold_reg[5] <= _002_[5];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       hold_reg[6] <= _002_[6];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       hold_reg[7] <= _002_[7];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       hold_reg[8] <= _002_[8];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       hold_reg[9] <= _002_[9];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       txd_o <= _012_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_bit_cnt[0] <= _011_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_bit_cnt[1] <= _011_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_bit_cnt[2] <= _011_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_bit_cnt[3] <= _011_[3];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       shift_en <= _009_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       shift_en_r <= _010_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rxd_s <= rxd_i;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rxd_r <= rxd_s;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_bit_cnt[0] <= _004_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_bit_cnt[1] <= _004_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_bit_cnt[2] <= _004_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_bit_cnt[3] <= _004_[3];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_go <= _005_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_valid <= _007_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_valid_r <= rx_valid;
   reg \rxr_reg[2] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \rxr_reg[2]  <= _008_[2];
   assign rxr[2] = \rxr_reg[2] ;
   reg \rxr_reg[3] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \rxr_reg[3]  <= _008_[3];
   assign rxr[3] = \rxr_reg[3] ;
   reg \rxr_reg[4] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \rxr_reg[4]  <= _008_[4];
   assign rxr[4] = \rxr_reg[4] ;
   reg \rxr_reg[5] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \rxr_reg[5]  <= _008_[5];
   assign rxr[5] = \rxr_reg[5] ;
   reg \rxr_reg[6] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \rxr_reg[6]  <= _008_[6];
   assign rxr[6] = \rxr_reg[6] ;
   reg \rxr_reg[7] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \rxr_reg[7]  <= _008_[7];
   assign rxr[7] = \rxr_reg[7] ;
   reg \rxr_reg[8] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \rxr_reg[8]  <= _008_[8];
   assign rxr[8] = \rxr_reg[8] ;
   reg \rxr_reg[9] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \rxr_reg[9]  <= _008_[9];
   assign rxr[9] = \rxr_reg[9] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rts_o <= rxf_full;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       change <= _000_;
-  (* src = "<stdcells.v>:1352" *)
   always @(posedge clk or negedge rst)
     if (!rst)
       dpll_state[0] <= 1;
     else
       dpll_state[0] <= _001_[0];
-  (* src = "<stdcells.v>:1345" *)
   always @(posedge clk or negedge rst)
     if (!rst)
       dpll_state[1] <= 0;
     else
       dpll_state[1] <= _001_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_sio_ce_r1 <= rx_sio_ce_d;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_sio_ce_r2 <= rx_sio_ce_r1;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_sio_ce <= _006_;
-  (* src = "rtl/sasc_top.v:148" *)
   sasc_fifo4 rx_fifo (
     .clk(clk),
     .clr(1'b0),
@@ -819,7 +665,6 @@ module sasc_top(clk, rst, rxd_i, txd_o, cts_i, rts_o, sio_ce, sio_ce_x4, din_i, 
     .rst(rst),
     .we(rx_we)
   );
-  (* src = "rtl/sasc_top.v:137" *)
   sasc_fifo4 tx_fifo (
     .clk(clk),
     .clr(1'b0),

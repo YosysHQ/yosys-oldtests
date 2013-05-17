@@ -78,8 +78,6 @@ Removed 0 unused modules.
 
 -- Executing script file `../scripts/generic.ys' --
 
--- Executing script file `../scripts/generic-no-fsm.ys' --
-
 5. Executing HIERARCHY pass (managing design hierarchy).
 
 6. Executing PROC pass (convert processes to netlists).
@@ -3152,19 +3150,19 @@ Finding unused cells or wires in module \usb_tx_phy..
 
 12. Executing ABC pass (technology mapping using ABC).
 
-12.1. Extracting gate logic of module `\usb_phy' to `/tmp/yosys-abc-x4m9jt/input.v'..
+12.1. Extracting gate logic of module `\usb_phy' to `/tmp/yosys-abc-gkoDzA/input.v'..
 Extracted 36 gates and 48 wires to a logic network with 10 inputs and 6 outputs.
 
 12.1.1. Executing ABC.
-ABC: ABC command line: "read_verilog /tmp/yosys-abc-x4m9jt/input.v; read_library /tmp/yosys-abc-x4m9jt/stdcells.genlib; map; write_verilog /tmp/yosys-abc-x4m9jt/output.v".
+ABC: ABC command line: "read_verilog /tmp/yosys-abc-gkoDzA/input.v; read_library /tmp/yosys-abc-gkoDzA/stdcells.genlib; map; write_verilog /tmp/yosys-abc-gkoDzA/output.v".
 ABC: There is no hierarchy information.
 ABC: The number of gates read = 8.
-ABC: Read 8 gates from file "/tmp/yosys-abc-x4m9jt/stdcells.genlib".
-ABC: Selected 8 functionally unique gates. Time =     0.01 sec
+ABC: Read 8 gates from file "/tmp/yosys-abc-gkoDzA/stdcells.genlib".
+ABC: Selected 8 functionally unique gates. Time =     0.00 sec
 ABC: Created 4 rules and 4 matches. Time =     0.00 sec
 ABC: Warning: The network was strashed and balanced before mapping.
-ABC: A simple supergate library is derived from gate library "/tmp/yosys-abc-x4m9jt/stdcells.genlib".
-ABC: Loaded 9 unique 5-input supergates from "/tmp/yosys-abc-x4m9jt/stdcells.super".  Time =     0.00 sec
+ABC: A simple supergate library is derived from gate library "/tmp/yosys-abc-gkoDzA/stdcells.genlib".
+ABC: Loaded 9 unique 5-input supergates from "/tmp/yosys-abc-gkoDzA/stdcells.super".  Time =     0.00 sec
 
 12.1.2. Re-integrating ABC results.
 ABC RESULTS:               AND cells:       11
@@ -3176,27 +3174,27 @@ ABC RESULTS:        internal signals:       32
 ABC RESULTS:           input signals:       10
 ABC RESULTS:          output signals:        6
 
-12.1.3. Removing temp directory `/tmp/yosys-abc-x4m9jt':
-Removing `/tmp/yosys-abc-x4m9jt/input.v'.
-Removing `/tmp/yosys-abc-x4m9jt/output.v'.
-Removing `/tmp/yosys-abc-x4m9jt/stdcells.genlib'.
-Removing `/tmp/yosys-abc-x4m9jt/stdcells.genlib_temp'.
-Removing `/tmp/yosys-abc-x4m9jt/stdcells.super'.
-Removing `/tmp/yosys-abc-x4m9jt'.
+12.1.3. Removing temp directory `/tmp/yosys-abc-gkoDzA':
+Removing `/tmp/yosys-abc-gkoDzA/input.v'.
+Removing `/tmp/yosys-abc-gkoDzA/output.v'.
+Removing `/tmp/yosys-abc-gkoDzA/stdcells.genlib'.
+Removing `/tmp/yosys-abc-gkoDzA/stdcells.genlib_temp'.
+Removing `/tmp/yosys-abc-gkoDzA/stdcells.super'.
+Removing `/tmp/yosys-abc-gkoDzA'.
 
-12.2. Extracting gate logic of module `\usb_rx_phy' to `/tmp/yosys-abc-GWxMUI/input.v'..
+12.2. Extracting gate logic of module `\usb_rx_phy' to `/tmp/yosys-abc-eRypnV/input.v'..
 Extracted 226 gates and 274 wires to a logic network with 46 inputs and 38 outputs.
 
 12.2.1. Executing ABC.
-ABC: ABC command line: "read_verilog /tmp/yosys-abc-GWxMUI/input.v; read_library /tmp/yosys-abc-GWxMUI/stdcells.genlib; map; write_verilog /tmp/yosys-abc-GWxMUI/output.v".
+ABC: ABC command line: "read_verilog /tmp/yosys-abc-eRypnV/input.v; read_library /tmp/yosys-abc-eRypnV/stdcells.genlib; map; write_verilog /tmp/yosys-abc-eRypnV/output.v".
 ABC: There is no hierarchy information.
 ABC: The number of gates read = 8.
-ABC: Read 8 gates from file "/tmp/yosys-abc-GWxMUI/stdcells.genlib".
+ABC: Read 8 gates from file "/tmp/yosys-abc-eRypnV/stdcells.genlib".
 ABC: Selected 8 functionally unique gates. Time =     0.00 sec
 ABC: Created 4 rules and 4 matches. Time =     0.00 sec
 ABC: Warning: The network was strashed and balanced before mapping.
-ABC: A simple supergate library is derived from gate library "/tmp/yosys-abc-GWxMUI/stdcells.genlib".
-ABC: Loaded 9 unique 5-input supergates from "/tmp/yosys-abc-GWxMUI/stdcells.super".  Time =     0.00 sec
+ABC: A simple supergate library is derived from gate library "/tmp/yosys-abc-eRypnV/stdcells.genlib".
+ABC: Loaded 9 unique 5-input supergates from "/tmp/yosys-abc-eRypnV/stdcells.super".  Time =     0.00 sec
 
 12.2.2. Re-integrating ABC results.
 ABC RESULTS:               AND cells:      101
@@ -3208,27 +3206,27 @@ ABC RESULTS:        internal signals:      190
 ABC RESULTS:           input signals:       46
 ABC RESULTS:          output signals:       38
 
-12.2.3. Removing temp directory `/tmp/yosys-abc-GWxMUI':
-Removing `/tmp/yosys-abc-GWxMUI/input.v'.
-Removing `/tmp/yosys-abc-GWxMUI/output.v'.
-Removing `/tmp/yosys-abc-GWxMUI/stdcells.genlib'.
-Removing `/tmp/yosys-abc-GWxMUI/stdcells.genlib_temp'.
-Removing `/tmp/yosys-abc-GWxMUI/stdcells.super'.
-Removing `/tmp/yosys-abc-GWxMUI'.
+12.2.3. Removing temp directory `/tmp/yosys-abc-eRypnV':
+Removing `/tmp/yosys-abc-eRypnV/input.v'.
+Removing `/tmp/yosys-abc-eRypnV/output.v'.
+Removing `/tmp/yosys-abc-eRypnV/stdcells.genlib'.
+Removing `/tmp/yosys-abc-eRypnV/stdcells.genlib_temp'.
+Removing `/tmp/yosys-abc-eRypnV/stdcells.super'.
+Removing `/tmp/yosys-abc-eRypnV'.
 
-12.3. Extracting gate logic of module `\usb_tx_phy' to `/tmp/yosys-abc-JuzydZ/input.v'..
+12.3. Extracting gate logic of module `\usb_tx_phy' to `/tmp/yosys-abc-HZdAHg/input.v'..
 Extracted 244 gates and 302 wires to a logic network with 56 inputs and 36 outputs.
 
 12.3.1. Executing ABC.
-ABC: ABC command line: "read_verilog /tmp/yosys-abc-JuzydZ/input.v; read_library /tmp/yosys-abc-JuzydZ/stdcells.genlib; map; write_verilog /tmp/yosys-abc-JuzydZ/output.v".
+ABC: ABC command line: "read_verilog /tmp/yosys-abc-HZdAHg/input.v; read_library /tmp/yosys-abc-HZdAHg/stdcells.genlib; map; write_verilog /tmp/yosys-abc-HZdAHg/output.v".
 ABC: There is no hierarchy information.
 ABC: The number of gates read = 8.
-ABC: Read 8 gates from file "/tmp/yosys-abc-JuzydZ/stdcells.genlib".
+ABC: Read 8 gates from file "/tmp/yosys-abc-HZdAHg/stdcells.genlib".
 ABC: Selected 8 functionally unique gates. Time =     0.00 sec
 ABC: Created 4 rules and 4 matches. Time =     0.00 sec
 ABC: Warning: The network was strashed and balanced before mapping.
-ABC: A simple supergate library is derived from gate library "/tmp/yosys-abc-JuzydZ/stdcells.genlib".
-ABC: Loaded 9 unique 5-input supergates from "/tmp/yosys-abc-JuzydZ/stdcells.super".  Time =     0.00 sec
+ABC: A simple supergate library is derived from gate library "/tmp/yosys-abc-HZdAHg/stdcells.genlib".
+ABC: Loaded 9 unique 5-input supergates from "/tmp/yosys-abc-HZdAHg/stdcells.super".  Time =     0.00 sec
 
 12.3.2. Re-integrating ABC results.
 ABC RESULTS:               AND cells:      102
@@ -3240,13 +3238,13 @@ ABC RESULTS:        internal signals:      210
 ABC RESULTS:           input signals:       56
 ABC RESULTS:          output signals:       36
 
-12.3.3. Removing temp directory `/tmp/yosys-abc-JuzydZ':
-Removing `/tmp/yosys-abc-JuzydZ/input.v'.
-Removing `/tmp/yosys-abc-JuzydZ/output.v'.
-Removing `/tmp/yosys-abc-JuzydZ/stdcells.genlib'.
-Removing `/tmp/yosys-abc-JuzydZ/stdcells.genlib_temp'.
-Removing `/tmp/yosys-abc-JuzydZ/stdcells.super'.
-Removing `/tmp/yosys-abc-JuzydZ'.
+12.3.3. Removing temp directory `/tmp/yosys-abc-HZdAHg':
+Removing `/tmp/yosys-abc-HZdAHg/input.v'.
+Removing `/tmp/yosys-abc-HZdAHg/output.v'.
+Removing `/tmp/yosys-abc-HZdAHg/stdcells.genlib'.
+Removing `/tmp/yosys-abc-HZdAHg/stdcells.genlib_temp'.
+Removing `/tmp/yosys-abc-HZdAHg/stdcells.super'.
+Removing `/tmp/yosys-abc-HZdAHg'.
 
 13. Executing OPT pass (performing simple optimizations).
 
@@ -3317,7 +3315,7 @@ Finding unused cells or wires in module \usb_tx_phy..
 13.11. Finished OPT passes. (There is nothing left to do.)
 
 14. Executing Verilog backend.
-Full command line: write_verilog output/synth.v
+Full command line: write_verilog -noattr output/synth.v
 Dumping module `\usb_phy'.
   renaming `$0\rst_cnt[4:0]' to `_00_'.
   renaming `$0\usb_rst[0:0]' to `_01_'.
@@ -3592,8 +3590,8 @@ Dumping module `\usb_rx_phy'.
   renaming `$abc$2137$g196' to `_378_'.
   renaming `$abc$2137$g197' to `_379_'.
   renaming `$abc$2137$g198' to `_380_'.
-  renaming `$abc$2137$n100' to `_021_'.
-  renaming `$abc$2137$n101_1' to `_022_'.
+  renaming `$abc$2137$n100_1' to `_021_'.
+  renaming `$abc$2137$n101' to `_022_'.
   renaming `$abc$2137$n102_1' to `_023_'.
   renaming `$abc$2137$n103_1' to `_024_'.
   renaming `$abc$2137$n104_1' to `_025_'.
@@ -3661,11 +3659,11 @@ Dumping module `\usb_rx_phy'.
   renaming `$abc$2137$n182_1' to `_087_'.
   renaming `$abc$2137$n183' to `_088_'.
   renaming `$abc$2137$n184_1' to `_089_'.
-  renaming `$abc$2137$n185_1' to `_090_'.
-  renaming `$abc$2137$n187_1' to `_091_'.
-  renaming `$abc$2137$n188' to `_092_'.
-  renaming `$abc$2137$n189_1' to `_093_'.
-  renaming `$abc$2137$n190' to `_094_'.
+  renaming `$abc$2137$n185' to `_090_'.
+  renaming `$abc$2137$n187' to `_091_'.
+  renaming `$abc$2137$n188_1' to `_092_'.
+  renaming `$abc$2137$n189' to `_093_'.
+  renaming `$abc$2137$n190_1' to `_094_'.
   renaming `$abc$2137$n191' to `_095_'.
   renaming `$abc$2137$n193' to `_096_'.
   renaming `$abc$2137$n194' to `_097_'.
@@ -3685,8 +3683,8 @@ Dumping module `\usb_rx_phy'.
   renaming `$abc$2137$n220' to `_111_'.
   renaming `$abc$2137$n222' to `_112_'.
   renaming `$abc$2137$n223' to `_113_'.
-  renaming `$abc$2137$n224_1' to `_114_'.
-  renaming `$abc$2137$n225' to `_115_'.
+  renaming `$abc$2137$n224' to `_114_'.
+  renaming `$abc$2137$n225_1' to `_115_'.
   renaming `$abc$2137$n227' to `_116_'.
   renaming `$abc$2137$n228' to `_117_'.
   renaming `$abc$2137$n229' to `_118_'.
@@ -4046,8 +4044,8 @@ Dumping module `\usb_tx_phy'.
   renaming `$abc$2138$n124' to `_042_'.
   renaming `$abc$2138$n126_1' to `_043_'.
   renaming `$abc$2138$n127_1' to `_044_'.
-  renaming `$abc$2138$n128_1' to `_045_'.
-  renaming `$abc$2138$n129' to `_046_'.
+  renaming `$abc$2138$n128' to `_045_'.
+  renaming `$abc$2138$n129_1' to `_046_'.
   renaming `$abc$2138$n131_1' to `_047_'.
   renaming `$abc$2138$n132' to `_048_'.
   renaming `$abc$2138$n133' to `_049_'.
@@ -4070,10 +4068,10 @@ Dumping module `\usb_tx_phy'.
   renaming `$abc$2138$n153_1' to `_066_'.
   renaming `$abc$2138$n154_1' to `_067_'.
   renaming `$abc$2138$n156_1' to `_068_'.
-  renaming `$abc$2138$n157_1' to `_069_'.
+  renaming `$abc$2138$n157' to `_069_'.
   renaming `$abc$2138$n160_1' to `_070_'.
-  renaming `$abc$2138$n161_1' to `_071_'.
-  renaming `$abc$2138$n162' to `_072_'.
+  renaming `$abc$2138$n161' to `_071_'.
+  renaming `$abc$2138$n162_1' to `_072_'.
   renaming `$abc$2138$n163' to `_073_'.
   renaming `$abc$2138$n164_1' to `_074_'.
   renaming `$abc$2138$n165' to `_075_'.
@@ -4106,23 +4104,23 @@ Dumping module `\usb_tx_phy'.
   renaming `$abc$2138$n202' to `_102_'.
   renaming `$abc$2138$n203' to `_103_'.
   renaming `$abc$2138$n205' to `_104_'.
-  renaming `$abc$2138$n206_1' to `_105_'.
-  renaming `$abc$2138$n207' to `_106_'.
+  renaming `$abc$2138$n206' to `_105_'.
+  renaming `$abc$2138$n207_1' to `_106_'.
   renaming `$abc$2138$n208' to `_107_'.
-  renaming `$abc$2138$n209_1' to `_108_'.
-  renaming `$abc$2138$n210' to `_109_'.
-  renaming `$abc$2138$n212_1' to `_110_'.
-  renaming `$abc$2138$n213' to `_111_'.
+  renaming `$abc$2138$n209' to `_108_'.
+  renaming `$abc$2138$n210_1' to `_109_'.
+  renaming `$abc$2138$n212' to `_110_'.
+  renaming `$abc$2138$n213_1' to `_111_'.
   renaming `$abc$2138$n214' to `_112_'.
-  renaming `$abc$2138$n215_1' to `_113_'.
+  renaming `$abc$2138$n215' to `_113_'.
   renaming `$abc$2138$n217' to `_114_'.
-  renaming `$abc$2138$n218_1' to `_115_'.
-  renaming `$abc$2138$n219' to `_116_'.
+  renaming `$abc$2138$n218' to `_115_'.
+  renaming `$abc$2138$n219_1' to `_116_'.
   renaming `$abc$2138$n220' to `_117_'.
-  renaming `$abc$2138$n221_1' to `_118_'.
-  renaming `$abc$2138$n222' to `_119_'.
+  renaming `$abc$2138$n221' to `_118_'.
+  renaming `$abc$2138$n222_1' to `_119_'.
   renaming `$abc$2138$n223' to `_120_'.
-  renaming `$abc$2138$n224_1' to `_121_'.
+  renaming `$abc$2138$n224' to `_121_'.
   renaming `$abc$2138$n226' to `_122_'.
   renaming `$abc$2138$n227' to `_123_'.
   renaming `$abc$2138$n228' to `_124_'.

@@ -71,8 +71,6 @@ Removed 0 unused modules.
 
 -- Executing script file `../scripts/generic.ys' --
 
--- Executing script file `../scripts/generic-no-fsm.ys' --
-
 5. Executing HIERARCHY pass (managing design hierarchy).
 
 6. Executing PROC pass (convert processes to netlists).
@@ -3947,19 +3945,19 @@ Finding unused cells or wires in module \i2c_master_top..
 
 12. Executing ABC pass (technology mapping using ABC).
 
-12.1. Extracting gate logic of module `\i2c_master_bit_ctrl' to `/tmp/yosys-abc-heCpxF/input.v'..
+12.1. Extracting gate logic of module `\i2c_master_bit_ctrl' to `/tmp/yosys-abc-Y0i9to/input.v'..
 Extracted 493 gates and 568 wires to a logic network with 73 inputs and 48 outputs.
 
 12.1.1. Executing ABC.
-ABC: ABC command line: "read_verilog /tmp/yosys-abc-heCpxF/input.v; read_library /tmp/yosys-abc-heCpxF/stdcells.genlib; map; write_verilog /tmp/yosys-abc-heCpxF/output.v".
+ABC: ABC command line: "read_verilog /tmp/yosys-abc-Y0i9to/input.v; read_library /tmp/yosys-abc-Y0i9to/stdcells.genlib; map; write_verilog /tmp/yosys-abc-Y0i9to/output.v".
 ABC: There is no hierarchy information.
 ABC: The number of gates read = 8.
-ABC: Read 8 gates from file "/tmp/yosys-abc-heCpxF/stdcells.genlib".
+ABC: Read 8 gates from file "/tmp/yosys-abc-Y0i9to/stdcells.genlib".
 ABC: Selected 8 functionally unique gates. Time =     0.00 sec
 ABC: Created 4 rules and 4 matches. Time =     0.00 sec
 ABC: Warning: The network was strashed and balanced before mapping.
-ABC: A simple supergate library is derived from gate library "/tmp/yosys-abc-heCpxF/stdcells.genlib".
-ABC: Loaded 9 unique 5-input supergates from "/tmp/yosys-abc-heCpxF/stdcells.super".  Time =     0.00 sec
+ABC: A simple supergate library is derived from gate library "/tmp/yosys-abc-Y0i9to/stdcells.genlib".
+ABC: Loaded 9 unique 5-input supergates from "/tmp/yosys-abc-Y0i9to/stdcells.super".  Time =     0.00 sec
 
 12.1.2. Re-integrating ABC results.
 ABC RESULTS:               AND cells:      242
@@ -3971,27 +3969,27 @@ ABC RESULTS:        internal signals:      447
 ABC RESULTS:           input signals:       73
 ABC RESULTS:          output signals:       48
 
-12.1.3. Removing temp directory `/tmp/yosys-abc-heCpxF':
-Removing `/tmp/yosys-abc-heCpxF/input.v'.
-Removing `/tmp/yosys-abc-heCpxF/output.v'.
-Removing `/tmp/yosys-abc-heCpxF/stdcells.genlib'.
-Removing `/tmp/yosys-abc-heCpxF/stdcells.genlib_temp'.
-Removing `/tmp/yosys-abc-heCpxF/stdcells.super'.
-Removing `/tmp/yosys-abc-heCpxF'.
+12.1.3. Removing temp directory `/tmp/yosys-abc-Y0i9to':
+Removing `/tmp/yosys-abc-Y0i9to/input.v'.
+Removing `/tmp/yosys-abc-Y0i9to/output.v'.
+Removing `/tmp/yosys-abc-Y0i9to/stdcells.genlib'.
+Removing `/tmp/yosys-abc-Y0i9to/stdcells.genlib_temp'.
+Removing `/tmp/yosys-abc-Y0i9to/stdcells.super'.
+Removing `/tmp/yosys-abc-Y0i9to'.
 
-12.2. Extracting gate logic of module `\i2c_master_byte_ctrl' to `/tmp/yosys-abc-bN7Pbx/input.v'..
+12.2. Extracting gate logic of module `\i2c_master_byte_ctrl' to `/tmp/yosys-abc-HQsi4F/input.v'..
 Extracted 254 gates and 297 wires to a logic network with 41 inputs and 25 outputs.
 
 12.2.1. Executing ABC.
-ABC: ABC command line: "read_verilog /tmp/yosys-abc-bN7Pbx/input.v; read_library /tmp/yosys-abc-bN7Pbx/stdcells.genlib; map; write_verilog /tmp/yosys-abc-bN7Pbx/output.v".
+ABC: ABC command line: "read_verilog /tmp/yosys-abc-HQsi4F/input.v; read_library /tmp/yosys-abc-HQsi4F/stdcells.genlib; map; write_verilog /tmp/yosys-abc-HQsi4F/output.v".
 ABC: There is no hierarchy information.
 ABC: The number of gates read = 8.
-ABC: Read 8 gates from file "/tmp/yosys-abc-bN7Pbx/stdcells.genlib".
+ABC: Read 8 gates from file "/tmp/yosys-abc-HQsi4F/stdcells.genlib".
 ABC: Selected 8 functionally unique gates. Time =     0.00 sec
 ABC: Created 4 rules and 4 matches. Time =     0.00 sec
 ABC: Warning: The network was strashed and balanced before mapping.
-ABC: A simple supergate library is derived from gate library "/tmp/yosys-abc-bN7Pbx/stdcells.genlib".
-ABC: Loaded 9 unique 5-input supergates from "/tmp/yosys-abc-bN7Pbx/stdcells.super".  Time =     0.00 sec
+ABC: A simple supergate library is derived from gate library "/tmp/yosys-abc-HQsi4F/stdcells.genlib".
+ABC: Loaded 9 unique 5-input supergates from "/tmp/yosys-abc-HQsi4F/stdcells.super".  Time =     0.00 sec
 
 12.2.2. Re-integrating ABC results.
 ABC RESULTS:               AND cells:      103
@@ -4003,27 +4001,27 @@ ABC RESULTS:        internal signals:      231
 ABC RESULTS:           input signals:       41
 ABC RESULTS:          output signals:       25
 
-12.2.3. Removing temp directory `/tmp/yosys-abc-bN7Pbx':
-Removing `/tmp/yosys-abc-bN7Pbx/input.v'.
-Removing `/tmp/yosys-abc-bN7Pbx/output.v'.
-Removing `/tmp/yosys-abc-bN7Pbx/stdcells.genlib'.
-Removing `/tmp/yosys-abc-bN7Pbx/stdcells.genlib_temp'.
-Removing `/tmp/yosys-abc-bN7Pbx/stdcells.super'.
-Removing `/tmp/yosys-abc-bN7Pbx'.
+12.2.3. Removing temp directory `/tmp/yosys-abc-HQsi4F':
+Removing `/tmp/yosys-abc-HQsi4F/input.v'.
+Removing `/tmp/yosys-abc-HQsi4F/output.v'.
+Removing `/tmp/yosys-abc-HQsi4F/stdcells.genlib'.
+Removing `/tmp/yosys-abc-HQsi4F/stdcells.genlib_temp'.
+Removing `/tmp/yosys-abc-HQsi4F/stdcells.super'.
+Removing `/tmp/yosys-abc-HQsi4F'.
 
-12.3. Extracting gate logic of module `\i2c_master_top' to `/tmp/yosys-abc-f1S7yp/input.v'..
+12.3. Extracting gate logic of module `\i2c_master_top' to `/tmp/yosys-abc-FdkwcY/input.v'..
 Extracted 276 gates and 350 wires to a logic network with 72 inputs and 54 outputs.
 
 12.3.1. Executing ABC.
-ABC: ABC command line: "read_verilog /tmp/yosys-abc-f1S7yp/input.v; read_library /tmp/yosys-abc-f1S7yp/stdcells.genlib; map; write_verilog /tmp/yosys-abc-f1S7yp/output.v".
+ABC: ABC command line: "read_verilog /tmp/yosys-abc-FdkwcY/input.v; read_library /tmp/yosys-abc-FdkwcY/stdcells.genlib; map; write_verilog /tmp/yosys-abc-FdkwcY/output.v".
 ABC: There is no hierarchy information.
 ABC: The number of gates read = 8.
-ABC: Read 8 gates from file "/tmp/yosys-abc-f1S7yp/stdcells.genlib".
+ABC: Read 8 gates from file "/tmp/yosys-abc-FdkwcY/stdcells.genlib".
 ABC: Selected 8 functionally unique gates. Time =     0.00 sec
 ABC: Created 4 rules and 4 matches. Time =     0.00 sec
 ABC: Warning: The network was strashed and balanced before mapping.
-ABC: A simple supergate library is derived from gate library "/tmp/yosys-abc-f1S7yp/stdcells.genlib".
-ABC: Loaded 9 unique 5-input supergates from "/tmp/yosys-abc-f1S7yp/stdcells.super".  Time =     0.00 sec
+ABC: A simple supergate library is derived from gate library "/tmp/yosys-abc-FdkwcY/stdcells.genlib".
+ABC: Loaded 9 unique 5-input supergates from "/tmp/yosys-abc-FdkwcY/stdcells.super".  Time =     0.00 sec
 
 12.3.2. Re-integrating ABC results.
 ABC RESULTS:               AND cells:      112
@@ -4034,13 +4032,13 @@ ABC RESULTS:        internal signals:      224
 ABC RESULTS:           input signals:       72
 ABC RESULTS:          output signals:       54
 
-12.3.3. Removing temp directory `/tmp/yosys-abc-f1S7yp':
-Removing `/tmp/yosys-abc-f1S7yp/input.v'.
-Removing `/tmp/yosys-abc-f1S7yp/output.v'.
-Removing `/tmp/yosys-abc-f1S7yp/stdcells.genlib'.
-Removing `/tmp/yosys-abc-f1S7yp/stdcells.genlib_temp'.
-Removing `/tmp/yosys-abc-f1S7yp/stdcells.super'.
-Removing `/tmp/yosys-abc-f1S7yp'.
+12.3.3. Removing temp directory `/tmp/yosys-abc-FdkwcY':
+Removing `/tmp/yosys-abc-FdkwcY/input.v'.
+Removing `/tmp/yosys-abc-FdkwcY/output.v'.
+Removing `/tmp/yosys-abc-FdkwcY/stdcells.genlib'.
+Removing `/tmp/yosys-abc-FdkwcY/stdcells.genlib_temp'.
+Removing `/tmp/yosys-abc-FdkwcY/stdcells.super'.
+Removing `/tmp/yosys-abc-FdkwcY'.
 
 13. Executing OPT pass (performing simple optimizations).
 
@@ -4101,7 +4099,7 @@ Finding unused cells or wires in module \i2c_master_top..
 13.11. Finished OPT passes. (There is nothing left to do.)
 
 14. Executing Verilog backend.
-Full command line: write_verilog output/synth.v
+Full command line: write_verilog -noattr output/synth.v
 Dumping module `\i2c_master_bit_ctrl'.
   renaming `$0\al[0:0]' to `_000_'.
   renaming `$0\busy[0:0]' to `_001_'.
@@ -4628,46 +4626,46 @@ Dumping module `\i2c_master_bit_ctrl'.
   renaming `$abc$1068$n194_1' to `_083_'.
   renaming `$abc$1068$n195_1' to `_084_'.
   renaming `$abc$1068$n196_1' to `_085_'.
-  renaming `$abc$1068$n197' to `_086_'.
+  renaming `$abc$1068$n197_1' to `_086_'.
   renaming `$abc$1068$n199' to `_087_'.
   renaming `$abc$1068$n200_1' to `_088_'.
   renaming `$abc$1068$n201_1' to `_089_'.
   renaming `$abc$1068$n203_1' to `_090_'.
-  renaming `$abc$1068$n204_1' to `_091_'.
-  renaming `$abc$1068$n205' to `_092_'.
-  renaming `$abc$1068$n207_1' to `_093_'.
-  renaming `$abc$1068$n208' to `_094_'.
+  renaming `$abc$1068$n204' to `_091_'.
+  renaming `$abc$1068$n205_1' to `_092_'.
+  renaming `$abc$1068$n207' to `_093_'.
+  renaming `$abc$1068$n208_1' to `_094_'.
   renaming `$abc$1068$n209' to `_095_'.
-  renaming `$abc$1068$n211' to `_096_'.
+  renaming `$abc$1068$n211_1' to `_096_'.
   renaming `$abc$1068$n212' to `_097_'.
-  renaming `$abc$1068$n213_1' to `_098_'.
+  renaming `$abc$1068$n213' to `_098_'.
   renaming `$abc$1068$n215' to `_099_'.
-  renaming `$abc$1068$n216_1' to `_100_'.
-  renaming `$abc$1068$n217' to `_101_'.
-  renaming `$abc$1068$n219_1' to `_102_'.
-  renaming `$abc$1068$n220' to `_103_'.
+  renaming `$abc$1068$n216' to `_100_'.
+  renaming `$abc$1068$n217_1' to `_101_'.
+  renaming `$abc$1068$n219' to `_102_'.
+  renaming `$abc$1068$n220_1' to `_103_'.
   renaming `$abc$1068$n221' to `_104_'.
-  renaming `$abc$1068$n223' to `_105_'.
+  renaming `$abc$1068$n223_1' to `_105_'.
   renaming `$abc$1068$n224' to `_106_'.
-  renaming `$abc$1068$n225_1' to `_107_'.
+  renaming `$abc$1068$n225' to `_107_'.
   renaming `$abc$1068$n227' to `_108_'.
-  renaming `$abc$1068$n228_1' to `_109_'.
-  renaming `$abc$1068$n229' to `_110_'.
-  renaming `$abc$1068$n231_1' to `_111_'.
-  renaming `$abc$1068$n232' to `_112_'.
+  renaming `$abc$1068$n228' to `_109_'.
+  renaming `$abc$1068$n229_1' to `_110_'.
+  renaming `$abc$1068$n231' to `_111_'.
+  renaming `$abc$1068$n232_1' to `_112_'.
   renaming `$abc$1068$n233' to `_113_'.
   renaming `$abc$1068$n239' to `_114_'.
-  renaming `$abc$1068$n240_1' to `_115_'.
-  renaming `$abc$1068$n241' to `_116_'.
-  renaming `$abc$1068$n243_1' to `_117_'.
-  renaming `$abc$1068$n244' to `_118_'.
+  renaming `$abc$1068$n240' to `_115_'.
+  renaming `$abc$1068$n241_1' to `_116_'.
+  renaming `$abc$1068$n243' to `_117_'.
+  renaming `$abc$1068$n244_1' to `_118_'.
   renaming `$abc$1068$n245' to `_119_'.
-  renaming `$abc$1068$n247' to `_120_'.
+  renaming `$abc$1068$n247_1' to `_120_'.
   renaming `$abc$1068$n248' to `_121_'.
-  renaming `$abc$1068$n249_1' to `_122_'.
+  renaming `$abc$1068$n249' to `_122_'.
   renaming `$abc$1068$n251' to `_123_'.
-  renaming `$abc$1068$n252_1' to `_124_'.
-  renaming `$abc$1068$n253' to `_125_'.
+  renaming `$abc$1068$n252' to `_124_'.
+  renaming `$abc$1068$n253_1' to `_125_'.
   renaming `$abc$1068$n254' to `_126_'.
   renaming `$abc$1068$n255_1' to `_127_'.
   renaming `$abc$1068$n256_1' to `_128_'.
@@ -4688,8 +4686,8 @@ Dumping module `\i2c_master_bit_ctrl'.
   renaming `$abc$1068$n272' to `_143_'.
   renaming `$abc$1068$n273' to `_144_'.
   renaming `$abc$1068$n274_1' to `_145_'.
-  renaming `$abc$1068$n275_1' to `_146_'.
-  renaming `$abc$1068$n276' to `_147_'.
+  renaming `$abc$1068$n275' to `_146_'.
+  renaming `$abc$1068$n276_1' to `_147_'.
   renaming `$abc$1068$n277' to `_148_'.
   renaming `$abc$1068$n278_1' to `_149_'.
   renaming `$abc$1068$n279' to `_150_'.
@@ -4714,7 +4712,7 @@ Dumping module `\i2c_master_bit_ctrl'.
   renaming `$abc$1068$n298' to `_169_'.
   renaming `$abc$1068$n299' to `_170_'.
   renaming `$abc$1068$n301' to `_171_'.
-  renaming `$abc$1068$n303' to `_172_'.
+  renaming `$abc$1068$n302' to `_172_'.
   renaming `$abc$1068$n304' to `_173_'.
   renaming `$abc$1068$n305' to `_174_'.
   renaming `$abc$1068$n306' to `_175_'.
@@ -4772,8 +4770,8 @@ Dumping module `\i2c_master_bit_ctrl'.
   renaming `$abc$1068$n358' to `_227_'.
   renaming `$abc$1068$n359' to `_228_'.
   renaming `$abc$1068$n360' to `_229_'.
-  renaming `$abc$1068$n361' to `_230_'.
-  renaming `$abc$1068$n362_1' to `_231_'.
+  renaming `$abc$1068$n361_1' to `_230_'.
+  renaming `$abc$1068$n362' to `_231_'.
   renaming `$abc$1068$n363' to `_232_'.
   renaming `$abc$1068$n364_1' to `_233_'.
   renaming `$abc$1068$n365' to `_234_'.
@@ -4820,83 +4818,83 @@ Dumping module `\i2c_master_bit_ctrl'.
   renaming `$abc$1068$n406' to `_275_'.
   renaming `$abc$1068$n407' to `_276_'.
   renaming `$abc$1068$n408' to `_277_'.
-  renaming `$abc$1068$n410' to `_278_'.
+  renaming `$abc$1068$n409' to `_278_'.
   renaming `$abc$1068$n411' to `_279_'.
   renaming `$abc$1068$n412' to `_280_'.
   renaming `$abc$1068$n413' to `_281_'.
   renaming `$abc$1068$n414' to `_282_'.
-  renaming `$abc$1068$n417' to `_283_'.
-  renaming `$abc$1068$n419' to `_284_'.
+  renaming `$abc$1068$n415' to `_283_'.
+  renaming `$abc$1068$n418' to `_284_'.
   renaming `$abc$1068$n420' to `_285_'.
   renaming `$abc$1068$n421' to `_286_'.
   renaming `$abc$1068$n422' to `_287_'.
-  renaming `$abc$1068$n424' to `_288_'.
+  renaming `$abc$1068$n423' to `_288_'.
   renaming `$abc$1068$n425' to `_289_'.
   renaming `$abc$1068$n426' to `_290_'.
   renaming `$abc$1068$n427' to `_291_'.
-  renaming `$abc$1068$n429' to `_292_'.
+  renaming `$abc$1068$n428' to `_292_'.
   renaming `$abc$1068$n430' to `_293_'.
   renaming `$abc$1068$n431' to `_294_'.
   renaming `$abc$1068$n432' to `_295_'.
-  renaming `$abc$1068$n434' to `_296_'.
+  renaming `$abc$1068$n433' to `_296_'.
   renaming `$abc$1068$n435' to `_297_'.
   renaming `$abc$1068$n436' to `_298_'.
   renaming `$abc$1068$n437' to `_299_'.
-  renaming `$abc$1068$n439' to `_300_'.
-  renaming `$abc$1068$n441' to `_301_'.
+  renaming `$abc$1068$n438' to `_300_'.
+  renaming `$abc$1068$n440' to `_301_'.
   renaming `$abc$1068$n442' to `_302_'.
   renaming `$abc$1068$n443' to `_303_'.
   renaming `$abc$1068$n444' to `_304_'.
-  renaming `$abc$1068$n446' to `_305_'.
+  renaming `$abc$1068$n445' to `_305_'.
   renaming `$abc$1068$n447' to `_306_'.
   renaming `$abc$1068$n448' to `_307_'.
   renaming `$abc$1068$n449' to `_308_'.
-  renaming `$abc$1068$n452' to `_309_'.
-  renaming `$abc$1068$n454' to `_310_'.
+  renaming `$abc$1068$n450' to `_309_'.
+  renaming `$abc$1068$n453' to `_310_'.
   renaming `$abc$1068$n455' to `_311_'.
   renaming `$abc$1068$n456' to `_312_'.
   renaming `$abc$1068$n457' to `_313_'.
-  renaming `$abc$1068$n459' to `_314_'.
+  renaming `$abc$1068$n458' to `_314_'.
   renaming `$abc$1068$n460' to `_315_'.
   renaming `$abc$1068$n461' to `_316_'.
   renaming `$abc$1068$n462' to `_317_'.
-  renaming `$abc$1068$n464' to `_318_'.
+  renaming `$abc$1068$n463' to `_318_'.
   renaming `$abc$1068$n465' to `_319_'.
   renaming `$abc$1068$n466' to `_320_'.
   renaming `$abc$1068$n467' to `_321_'.
-  renaming `$abc$1068$n469' to `_322_'.
+  renaming `$abc$1068$n468' to `_322_'.
   renaming `$abc$1068$n470' to `_323_'.
   renaming `$abc$1068$n471' to `_324_'.
   renaming `$abc$1068$n472' to `_325_'.
-  renaming `$abc$1068$n474' to `_326_'.
+  renaming `$abc$1068$n473' to `_326_'.
   renaming `$abc$1068$n475' to `_327_'.
   renaming `$abc$1068$n476' to `_328_'.
   renaming `$abc$1068$n477' to `_329_'.
-  renaming `$abc$1068$n479' to `_330_'.
+  renaming `$abc$1068$n478' to `_330_'.
   renaming `$abc$1068$n480' to `_331_'.
   renaming `$abc$1068$n481' to `_332_'.
   renaming `$abc$1068$n482' to `_333_'.
   renaming `$abc$1068$n483' to `_334_'.
-  renaming `$abc$1068$n485' to `_335_'.
+  renaming `$abc$1068$n484' to `_335_'.
   renaming `$abc$1068$n486' to `_336_'.
   renaming `$abc$1068$n487' to `_337_'.
   renaming `$abc$1068$n488' to `_338_'.
-  renaming `$abc$1068$n490' to `_339_'.
+  renaming `$abc$1068$n489' to `_339_'.
   renaming `$abc$1068$n491' to `_340_'.
   renaming `$abc$1068$n492' to `_341_'.
   renaming `$abc$1068$n493' to `_342_'.
-  renaming `$abc$1068$n495' to `_343_'.
+  renaming `$abc$1068$n494' to `_343_'.
   renaming `$abc$1068$n496' to `_344_'.
   renaming `$abc$1068$n497' to `_345_'.
   renaming `$abc$1068$n498' to `_346_'.
-  renaming `$abc$1068$n500' to `_347_'.
-  renaming `$abc$1068$n502' to `_348_'.
+  renaming `$abc$1068$n499' to `_347_'.
+  renaming `$abc$1068$n501' to `_348_'.
   renaming `$abc$1068$n503' to `_349_'.
   renaming `$abc$1068$n504' to `_350_'.
   renaming `$abc$1068$n505' to `_351_'.
-  renaming `$abc$1068$n507' to `_352_'.
+  renaming `$abc$1068$n506' to `_352_'.
   renaming `$abc$1068$n508' to `_353_'.
-  renaming `$abc$1068$n510' to `_354_'.
+  renaming `$abc$1068$n509' to `_354_'.
   renaming `$abc$1068$n511' to `_355_'.
   renaming `$abc$1068$n512' to `_356_'.
   renaming `$abc$1068$n513' to `_357_'.
@@ -4919,8 +4917,8 @@ Dumping module `\i2c_master_bit_ctrl'.
   renaming `$abc$1068$n530' to `_374_'.
   renaming `$abc$1068$n531' to `_375_'.
   renaming `$abc$1068$n532' to `_376_'.
-  renaming `$abc$1068$n534' to `_377_'.
-  renaming `$abc$1068$n536' to `_378_'.
+  renaming `$abc$1068$n533' to `_377_'.
+  renaming `$abc$1068$n535' to `_378_'.
   renaming `$abc$1068$n537' to `_379_'.
   renaming `$abc$1068$n538' to `_380_'.
   renaming `$abc$1068$n539' to `_381_'.
@@ -4947,7 +4945,7 @@ Dumping module `\i2c_master_bit_ctrl'.
   renaming `$abc$1068$n560' to `_402_'.
   renaming `$abc$1068$n561' to `_403_'.
   renaming `$abc$1068$n562' to `_404_'.
-  renaming `$abc$1068$n564' to `_405_'.
+  renaming `$abc$1068$n563' to `_405_'.
   renaming `$abc$1068$n565' to `_406_'.
   renaming `$abc$1068$n566' to `_407_'.
   renaming `$procdff$868.V[0].ff' to `_847_'.
@@ -5403,10 +5401,10 @@ Dumping module `\i2c_master_byte_ctrl'.
   renaming `$abc$1069$n310' to `_179_'.
   renaming `$abc$1069$n311' to `_180_'.
   renaming `$abc$1069$n66' to `_181_'.
-  renaming `$abc$1069$n67_1' to `_182_'.
-  renaming `$abc$1069$n68' to `_183_'.
-  renaming `$abc$1069$n70_1' to `_184_'.
-  renaming `$abc$1069$n71' to `_185_'.
+  renaming `$abc$1069$n67' to `_182_'.
+  renaming `$abc$1069$n68_1' to `_183_'.
+  renaming `$abc$1069$n70' to `_184_'.
+  renaming `$abc$1069$n71_1' to `_185_'.
   renaming `$abc$1069$n73' to `_186_'.
   renaming `$abc$1069$n74' to `_187_'.
   renaming `$abc$1069$n76' to `_188_'.
@@ -5743,7 +5741,7 @@ Dumping module `\i2c_master_top'.
   renaming `$abc$1070$n134_1' to `_018_'.
   renaming `$abc$1070$n135_1' to `_019_'.
   renaming `$abc$1070$n136_1' to `_020_'.
-  renaming `$abc$1070$n137_1' to `_021_'.
+  renaming `$abc$1070$n137' to `_021_'.
   renaming `$abc$1070$n139' to `_022_'.
   renaming `$abc$1070$n140_1' to `_023_'.
   renaming `$abc$1070$n142_1' to `_024_'.

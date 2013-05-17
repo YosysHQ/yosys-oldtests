@@ -1,10 +1,6 @@
-(* src = "rtl/fifo4.v:63" *)
 module \$paramod\fifo4\dw=8 (clk, rst, clr, din, we, dout, re, full, empty);
-  (* src = "rtl/fifo4.v:126" *)
   wire _000_;
-  (* src = "rtl/fifo4.v:105" *)
   wire [1:0] _001_;
-  (* src = "rtl/fifo4.v:95" *)
   wire [1:0] _002_;
   wire _003_;
   wire _004_;
@@ -67,41 +63,25 @@ module \$paramod\fifo4\dw=8 (clk, rst, clr, din, we, dout, re, full, empty);
   wire _061_;
   wire _062_;
   wire _063_;
-  (* src = "<stdcells.v>:1169" *)
   wire [7:0] _064_;
-  (* src = "<stdcells.v>:1169" *)
   wire [7:0] _065_;
-  (* src = "<stdcells.v>:1169" *)
   wire [7:0] _066_;
-  (* src = "<stdcells.v>:1169" *)
   wire [7:0] _067_;
-  (* src = "rtl/fifo4.v:67" *)
   input clk;
-  (* src = "rtl/fifo4.v:68" *)
   input clr;
-  (* src = "rtl/fifo4.v:69" *)
   input [8:1] din;
-  (* src = "rtl/fifo4.v:71" *)
   output [8:1] dout;
-  (* src = "rtl/fifo4.v:73" *)
   output empty;
-  (* src = "rtl/fifo4.v:73" *)
   output full;
-  (* src = "rtl/fifo4.v:88" *)
   reg gb;
   reg [8:1] \mem[0] ;
   reg [8:1] \mem[1] ;
   reg [8:1] \mem[2] ;
   reg [8:1] \mem[3] ;
-  (* src = "rtl/fifo4.v:72" *)
   input re;
-  (* src = "rtl/fifo4.v:83" *)
   reg [1:0] rp;
-  (* src = "rtl/fifo4.v:67" *)
   input rst;
-  (* src = "rtl/fifo4.v:70" *)
   input we;
-  (* src = "rtl/fifo4.v:82" *)
   reg [1:0] wp;
   assign _060_ = ~gb;
   assign _061_ = ~rp[1];
@@ -211,124 +191,87 @@ module \$paramod\fifo4\dw=8 (clk, rst, clr, din, we, dout, re, full, empty);
   assign _002_[0] = _058_ & _039_;
   assign _059_ = _022_ ? wp[1] : _044_;
   assign _002_[1] = _059_ & _039_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[0] [1] <= _064_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[0] [2] <= _064_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[0] [3] <= _064_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[0] [4] <= _064_[3];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[0] [5] <= _064_[4];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[0] [6] <= _064_[5];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[0] [7] <= _064_[6];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[0] [8] <= _064_[7];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[1] [1] <= _065_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[1] [2] <= _065_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[1] [3] <= _065_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[1] [4] <= _065_[3];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[1] [5] <= _065_[4];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[1] [6] <= _065_[5];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[1] [7] <= _065_[6];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[1] [8] <= _065_[7];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[2] [1] <= _066_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[2] [2] <= _066_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[2] [3] <= _066_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[2] [4] <= _066_[3];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[2] [5] <= _066_[4];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[2] [6] <= _066_[5];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[2] [7] <= _066_[6];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[2] [8] <= _066_[7];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[3] [1] <= _067_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[3] [2] <= _067_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[3] [3] <= _067_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[3] [4] <= _067_[3];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[3] [5] <= _067_[4];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[3] [6] <= _067_[5];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[3] [7] <= _067_[6];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \mem[3] [8] <= _067_[7];
-  (* src = "<stdcells.v>:1345" *)
   always @(posedge clk or negedge rst)
     if (!rst)
       rp[0] <= 0;
     else
       rp[0] <= _001_[0];
-  (* src = "<stdcells.v>:1345" *)
   always @(posedge clk or negedge rst)
     if (!rst)
       rp[1] <= 0;
     else
       rp[1] <= _001_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       gb <= _000_;
-  (* src = "<stdcells.v>:1345" *)
   always @(posedge clk or negedge rst)
     if (!rst)
       wp[0] <= 0;
     else
       wp[0] <= _002_[0];
-  (* src = "<stdcells.v>:1345" *)
   always @(posedge clk or negedge rst)
     if (!rst)
       wp[1] <= 0;
@@ -336,37 +279,21 @@ module \$paramod\fifo4\dw=8 (clk, rst, clr, din, we, dout, re, full, empty);
       wp[1] <= _002_[1];
 endmodule
 
-(* src = "rtl/simple_spi_top.v:78" *)
 module simple_spi_top(clk_i, rst_i, cyc_i, stb_i, adr_i, we_i, dat_i, dat_o, ack_o, inta_o, sck_o, mosi_o, miso_i);
-  (* src = "rtl/simple_spi_top.v:156" *)
   wire _000_;
-  (* src = "rtl/simple_spi_top.v:259" *)
   wire [2:0] _001_;
-  (* src = "rtl/simple_spi_top.v:236" *)
   wire [11:0] _002_;
-  (* src = "rtl/simple_spi_top.v:144" *)
   wire [7:0] _003_;
-  (* src = "rtl/simple_spi_top.v:204" *)
   wire _004_;
-  (* src = "rtl/simple_spi_top.v:259" *)
   wire _005_;
-  (* src = "rtl/simple_spi_top.v:259" *)
   wire _006_;
-  (* src = "rtl/simple_spi_top.v:124" *)
   wire [7:0] _007_;
-  (* src = "rtl/simple_spi_top.v:124" *)
   wire [7:0] _008_;
-  (* src = "rtl/simple_spi_top.v:181" *)
   wire _009_;
-  (* src = "rtl/simple_spi_top.v:259" *)
   wire [1:0] _010_;
-  (* src = "rtl/simple_spi_top.v:318" *)
   wire [1:0] _011_;
-  (* src = "rtl/simple_spi_top.v:259" *)
   wire [7:0] _012_;
-  (* src = "rtl/simple_spi_top.v:188" *)
   wire _013_;
-  (* src = "rtl/simple_spi_top.v:259" *)
   wire _014_;
   wire _015_;
   wire _016_;
@@ -662,102 +589,58 @@ module simple_spi_top(clk_i, rst_i, cyc_i, stb_i, adr_i, we_i, dat_i, dat_o, ack
   wire _306_;
   wire _307_;
   wire _308_;
-  (* src = "<stdcells.v>:42" *)
   wire _309_;
-  (* src = "rtl/simple_spi_top.v:88" *)
   output ack_o;
   reg ack_o;
-  (* src = "rtl/simple_spi_top.v:84" *)
   input [1:0] adr_i;
-  (* src = "rtl/simple_spi_top.v:116" *)
   reg [2:0] bcnt;
-  (* src = "rtl/simple_spi_top.v:80" *)
   input clk_i;
-  (* src = "rtl/simple_spi_top.v:235" *)
   reg [11:0] clkcnt;
-  (* src = "rtl/simple_spi_top.v:168" *)
   reg cpha;
-  (* src = "rtl/simple_spi_top.v:167" *)
   reg cpol;
-  (* src = "rtl/simple_spi_top.v:82" *)
   input cyc_i;
-  (* src = "rtl/simple_spi_top.v:86" *)
   input [7:0] dat_i;
-  (* src = "rtl/simple_spi_top.v:87" *)
   output [7:0] dat_o;
   reg [7:0] dat_o;
-  (* src = "rtl/simple_spi_top.v:165" *)
   reg dwom;
-  (* src = "rtl/simple_spi_top.v:175" *)
   reg [3:0] espr;
-  (* src = "rtl/simple_spi_top.v:172" *)
   reg [1:0] icnt;
-  (* src = "rtl/simple_spi_top.v:89" *)
   output inta_o;
   reg inta_o;
-  (* src = "rtl/simple_spi_top.v:94" *)
   input miso_i;
-  (* src = "rtl/simple_spi_top.v:93" *)
   output mosi_o;
   reg mosi_o;
-  (* src = "rtl/simple_spi_top.v:166" *)
   reg mstr;
-  (* src = "rtl/simple_spi_top.v:106" *)
   wire [7:0] rfdout;
-  (* src = "rtl/simple_spi_top.v:108" *)
   wire rfempty;
-  (* src = "rtl/simple_spi_top.v:108" *)
   wire rffull;
-  (* src = "rtl/simple_spi_top.v:108" *)
   wire rfre;
-  (* src = "rtl/simple_spi_top.v:107" *)
   reg rfwe;
-  (* src = "rtl/simple_spi_top.v:81" *)
   input rst_i;
-  (* src = "rtl/simple_spi_top.v:92" *)
   output sck_o;
   reg sck_o;
-  (* src = "rtl/simple_spi_top.v:100" *)
   wire [7:0] spcr;
-  (* src = "rtl/simple_spi_top.v:164" *)
   wire spe;
-  (* src = "rtl/simple_spi_top.v:102" *)
   wire [7:0] sper;
-  (* src = "rtl/simple_spi_top.v:163" *)
   wire spie;
-  (* src = "rtl/simple_spi_top.v:180" *)
   reg spif;
-  (* src = "rtl/simple_spi_top.v:169" *)
   wire [1:0] spr;
-  (* src = "rtl/simple_spi_top.v:173" *)
   wire [1:0] spre;
-  (* src = "rtl/simple_spi_top.v:101" *)
   wire [7:0] spsr;
-  (* src = "rtl/simple_spi_top.v:115" *)
   reg [1:0] state;
-  (* src = "rtl/simple_spi_top.v:83" *)
   input stb_i;
-  (* src = "rtl/simple_spi_top.v:317" *)
   reg [1:0] tcnt;
-  (* src = "rtl/simple_spi_top.v:103" *)
   wire [7:0] treg;
-  (* src = "rtl/simple_spi_top.v:187" *)
   wire wcol;
-  (* src = "rtl/simple_spi_top.v:85" *)
   input we_i;
-  (* src = "rtl/simple_spi_top.v:109" *)
   wire [7:0] wfdout;
-  (* src = "rtl/simple_spi_top.v:110" *)
   wire wfempty;
-  (* src = "rtl/simple_spi_top.v:110" *)
   wire wffull;
-  (* src = "rtl/simple_spi_top.v:107" *)
   reg wfre;
-  (* src = "rtl/simple_spi_top.v:110" *)
   wire wfwe;
   assign _015_ = ~adr_i[0];
-  assign _016_ = _015_ & adr_i[1];
-  assign _017_ = stb_i & cyc_i;
+  assign _016_ = adr_i[1] & _015_;
+  assign _017_ = cyc_i & stb_i;
   assign _018_ = _017_ & ack_o;
   assign _019_ = _018_ & _016_;
   assign wfwe = _019_ & we_i;
@@ -765,11 +648,11 @@ module simple_spi_top(clk_i, rst_i, cyc_i, stb_i, adr_i, we_i, dat_i, dat_o, ack
   assign rfre = _019_ & _020_;
   assign _021_ = ~ack_o;
   assign _000_ = _017_ & _021_;
-  assign _004_ = spcr[7] & spif;
+  assign _004_ = spif & spcr[7];
   assign _309_ = ~spcr[6];
   assign _022_ = _017_ & we_i;
   assign _023_ = ~adr_i[1];
-  assign _024_ = _015_ & _023_;
+  assign _024_ = _023_ & _015_;
   assign _025_ = _024_ ? dat_i[0] : espr[0];
   assign _007_[0] = _022_ ? _025_ : espr[0];
   assign _026_ = _024_ ? dat_i[1] : espr[1];
@@ -787,7 +670,7 @@ module simple_spi_top(clk_i, rst_i, cyc_i, stb_i, adr_i, we_i, dat_i, dat_o, ack
   assign _007_[6] = _022_ ? _032_ : spcr[6];
   assign _033_ = _024_ ? dat_i[7] : spcr[7];
   assign _007_[7] = _022_ ? _033_ : spcr[7];
-  assign _034_ = adr_i[0] & adr_i[1];
+  assign _034_ = adr_i[1] & adr_i[0];
   assign _035_ = _034_ ? dat_i[0] : espr[2];
   assign _008_[0] = _022_ ? _035_ : espr[2];
   assign _036_ = _034_ ? dat_i[1] : espr[3];
@@ -805,7 +688,7 @@ module simple_spi_top(clk_i, rst_i, cyc_i, stb_i, adr_i, we_i, dat_i, dat_o, ack
   assign _042_ = _034_ ? dat_i[7] : icnt[1];
   assign _008_[7] = _022_ ? _042_ : icnt[1];
   assign _043_ = ~dat_i[7];
-  assign _044_ = adr_i[0] & _023_;
+  assign _044_ = _023_ & adr_i[0];
   assign _045_ = ~_044_;
   assign _046_ = _045_ | _029_;
   assign _047_ = _046_ | _043_;
@@ -828,7 +711,7 @@ module simple_spi_top(clk_i, rst_i, cyc_i, stb_i, adr_i, we_i, dat_i, dat_o, ack
   assign _062_ = clkcnt[3] | clkcnt[2];
   assign _063_ = clkcnt[5] | clkcnt[4];
   assign _064_ = _063_ | _062_;
-  assign _065_ = clkcnt[0] | clkcnt[1];
+  assign _065_ = clkcnt[1] | clkcnt[0];
   assign _066_ = clkcnt[11] | clkcnt[10];
   assign _067_ = _066_ | _065_;
   assign _068_ = _067_ | _064_;
@@ -911,7 +794,7 @@ module simple_spi_top(clk_i, rst_i, cyc_i, stb_i, adr_i, we_i, dat_i, dat_o, ack
   assign _143_ = _140_ | clkcnt[10];
   assign _144_ = _143_ ^ _142_;
   assign _002_[11] = _144_ & _076_;
-  assign _145_ = _058_ ^ clkcnt[1];
+  assign _145_ = clkcnt[1] ^ _058_;
   assign _146_ = _131_ | _116_;
   assign _002_[1] = _076_ ? _145_ : _146_;
   assign _147_ = ~clkcnt[2];
@@ -1110,44 +993,37 @@ module simple_spi_top(clk_i, rst_i, cyc_i, stb_i, adr_i, we_i, dat_i, dat_o, ack
   assign _307_ = _306_ | _305_;
   assign _308_ = _307_ | _304_;
   assign _003_[7] = _034_ ? icnt[1] : _308_;
-  (* src = "<stdcells.v>:1345" *)
   always @(posedge clk_i or negedge rst_i)
     if (!rst_i)
       espr[0] <= 0;
     else
       espr[0] <= _007_[0];
-  (* src = "<stdcells.v>:1345" *)
   always @(posedge clk_i or negedge rst_i)
     if (!rst_i)
       espr[1] <= 0;
     else
       espr[1] <= _007_[1];
-  (* src = "<stdcells.v>:1345" *)
   always @(posedge clk_i or negedge rst_i)
     if (!rst_i)
       cpha <= 0;
     else
       cpha <= _007_[2];
-  (* src = "<stdcells.v>:1345" *)
   always @(posedge clk_i or negedge rst_i)
     if (!rst_i)
       cpol <= 0;
     else
       cpol <= _007_[3];
-  (* src = "<stdcells.v>:1352" *)
   always @(posedge clk_i or negedge rst_i)
     if (!rst_i)
       mstr <= 1;
     else
       mstr <= _007_[4];
-  (* src = "<stdcells.v>:1345" *)
   always @(posedge clk_i or negedge rst_i)
     if (!rst_i)
       dwom <= 0;
     else
       dwom <= _007_[5];
   reg \spcr_reg[6] ;
-  (* src = "<stdcells.v>:1345" *)
   always @(posedge clk_i or negedge rst_i)
     if (!rst_i)
       \spcr_reg[6]  <= 0;
@@ -1155,27 +1031,23 @@ module simple_spi_top(clk_i, rst_i, cyc_i, stb_i, adr_i, we_i, dat_i, dat_o, ack
       \spcr_reg[6]  <= _007_[6];
   assign spcr[6] = \spcr_reg[6] ;
   reg \spcr_reg[7] ;
-  (* src = "<stdcells.v>:1345" *)
   always @(posedge clk_i or negedge rst_i)
     if (!rst_i)
       \spcr_reg[7]  <= 0;
     else
       \spcr_reg[7]  <= _007_[7];
   assign spcr[7] = \spcr_reg[7] ;
-  (* src = "<stdcells.v>:1345" *)
   always @(posedge clk_i or negedge rst_i)
     if (!rst_i)
       espr[2] <= 0;
     else
       espr[2] <= _008_[0];
-  (* src = "<stdcells.v>:1345" *)
   always @(posedge clk_i or negedge rst_i)
     if (!rst_i)
       espr[3] <= 0;
     else
       espr[3] <= _008_[1];
   reg \sper_reg[2] ;
-  (* src = "<stdcells.v>:1345" *)
   always @(posedge clk_i or negedge rst_i)
     if (!rst_i)
       \sper_reg[2]  <= 0;
@@ -1183,7 +1055,6 @@ module simple_spi_top(clk_i, rst_i, cyc_i, stb_i, adr_i, we_i, dat_i, dat_o, ack
       \sper_reg[2]  <= _008_[2];
   assign sper[2] = \sper_reg[2] ;
   reg \sper_reg[3] ;
-  (* src = "<stdcells.v>:1345" *)
   always @(posedge clk_i or negedge rst_i)
     if (!rst_i)
       \sper_reg[3]  <= 0;
@@ -1191,7 +1062,6 @@ module simple_spi_top(clk_i, rst_i, cyc_i, stb_i, adr_i, we_i, dat_i, dat_o, ack
       \sper_reg[3]  <= _008_[3];
   assign sper[3] = \sper_reg[3] ;
   reg \sper_reg[4] ;
-  (* src = "<stdcells.v>:1345" *)
   always @(posedge clk_i or negedge rst_i)
     if (!rst_i)
       \sper_reg[4]  <= 0;
@@ -1199,171 +1069,125 @@ module simple_spi_top(clk_i, rst_i, cyc_i, stb_i, adr_i, we_i, dat_i, dat_o, ack
       \sper_reg[4]  <= _008_[4];
   assign sper[4] = \sper_reg[4] ;
   reg \sper_reg[5] ;
-  (* src = "<stdcells.v>:1345" *)
   always @(posedge clk_i or negedge rst_i)
     if (!rst_i)
       \sper_reg[5]  <= 0;
     else
       \sper_reg[5]  <= _008_[5];
   assign sper[5] = \sper_reg[5] ;
-  (* src = "<stdcells.v>:1345" *)
   always @(posedge clk_i or negedge rst_i)
     if (!rst_i)
       icnt[0] <= 0;
     else
       icnt[0] <= _008_[6];
-  (* src = "<stdcells.v>:1345" *)
   always @(posedge clk_i or negedge rst_i)
     if (!rst_i)
       icnt[1] <= 0;
     else
       icnt[1] <= _008_[7];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       dat_o[0] <= _003_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       dat_o[1] <= _003_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       dat_o[2] <= _003_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       dat_o[3] <= _003_[3];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       dat_o[4] <= _003_[4];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       dat_o[5] <= _003_[5];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       dat_o[6] <= _003_[6];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       dat_o[7] <= _003_[7];
-  (* src = "<stdcells.v>:1345" *)
   always @(posedge clk_i or negedge rst_i)
     if (!rst_i)
       ack_o <= 0;
     else
       ack_o <= _000_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       spif <= _009_;
   reg \spsr_reg[6] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       \spsr_reg[6]  <= _013_;
   assign spsr[6] = \spsr_reg[6] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       inta_o <= _004_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       clkcnt[0] <= _002_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       clkcnt[10] <= _002_[10];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       clkcnt[11] <= _002_[11];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       clkcnt[1] <= _002_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       clkcnt[2] <= _002_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       clkcnt[3] <= _002_[3];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       clkcnt[4] <= _002_[4];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       clkcnt[5] <= _002_[5];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       clkcnt[6] <= _002_[6];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       clkcnt[7] <= _002_[7];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       clkcnt[8] <= _002_[8];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       clkcnt[9] <= _002_[9];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       bcnt[0] <= _001_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       bcnt[1] <= _001_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       bcnt[2] <= _001_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       rfwe <= _005_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       sck_o <= _006_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       state[0] <= _010_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       state[1] <= _010_[1];
   reg \treg_reg[0] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       \treg_reg[0]  <= _012_[0];
   assign treg[0] = \treg_reg[0] ;
   reg \treg_reg[1] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       \treg_reg[1]  <= _012_[1];
   assign treg[1] = \treg_reg[1] ;
   reg \treg_reg[2] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       \treg_reg[2]  <= _012_[2];
   assign treg[2] = \treg_reg[2] ;
   reg \treg_reg[3] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       \treg_reg[3]  <= _012_[3];
   assign treg[3] = \treg_reg[3] ;
   reg \treg_reg[4] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       \treg_reg[4]  <= _012_[4];
   assign treg[4] = \treg_reg[4] ;
   reg \treg_reg[5] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       \treg_reg[5]  <= _012_[5];
   assign treg[5] = \treg_reg[5] ;
   reg \treg_reg[6] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       \treg_reg[6]  <= _012_[6];
   assign treg[6] = \treg_reg[6] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       mosi_o <= _012_[7];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       wfre <= _014_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       tcnt[0] <= _011_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk_i)
       tcnt[1] <= _011_[1];
-  (* src = "rtl/simple_spi_top.v:209" *)
   \$paramod\fifo4\dw=8  rfifo (
     .clk(clk_i),
     .clr(_309_),
@@ -1375,7 +1199,6 @@ module simple_spi_top(clk_i, rst_i, cyc_i, stb_i, adr_i, we_i, dat_i, dat_o, ack
     .rst(rst_i),
     .we(rfwe)
   );
-  (* src = "rtl/simple_spi_top.v:209" *)
   \$paramod\fifo4\dw=8  wfifo (
     .clk(clk_i),
     .clr(_309_),

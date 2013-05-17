@@ -1,12 +1,7 @@
-(* src = "rtl/spi_clgen.v:44" *)
 module spi_clgen(clk_in, rst, go, enable, last_clk, divider, clk_out, pos_edge, neg_edge);
-  (* src = "rtl/spi_clgen.v:85" *)
   wire _000_;
-  (* src = "rtl/spi_clgen.v:71" *)
   wire [15:0] _001_;
-  (* src = "rtl/spi_clgen.v:94" *)
   wire _002_;
-  (* src = "rtl/spi_clgen.v:94" *)
   wire _003_;
   wire _004_;
   wire _005_;
@@ -120,28 +115,18 @@ module spi_clgen(clk_in, rst, go, enable, last_clk, divider, clk_out, pos_edge, 
   wire _113_;
   wire _114_;
   wire _115_;
-  (* src = "rtl/spi_clgen.v:48" *)
   input clk_in;
-  (* src = "rtl/spi_clgen.v:54" *)
   output clk_out;
   reg clk_out;
-  (* src = "rtl/spi_clgen.v:62" *)
   reg [15:0] cnt;
-  (* src = "rtl/spi_clgen.v:53" *)
   input [15:0] divider;
-  (* src = "rtl/spi_clgen.v:50" *)
   input enable;
-  (* src = "rtl/spi_clgen.v:51" *)
   input go;
-  (* src = "rtl/spi_clgen.v:52" *)
   input last_clk;
-  (* src = "rtl/spi_clgen.v:56" *)
   output neg_edge;
   reg neg_edge;
-  (* src = "rtl/spi_clgen.v:55" *)
   output pos_edge;
   reg pos_edge;
-  (* src = "rtl/spi_clgen.v:49" *)
   input rst;
   assign _071_ = ~divider[13];
   assign _072_ = ~divider[14];
@@ -274,115 +259,96 @@ module spi_clgen(clk_in, rst, go, enable, last_clk, divider, clk_out, pos_edge, 
   assign _069_ = _068_ | _102_;
   assign _070_ = _069_ | _036_;
   assign _000_ = _070_ ^ _023_;
-  (* src = "<stdcells.v>:1368" *)
   always @(posedge clk_in or posedge rst)
     if (rst)
       cnt[0] <= 1;
     else
       cnt[0] <= _001_[0];
-  (* src = "<stdcells.v>:1368" *)
   always @(posedge clk_in or posedge rst)
     if (rst)
       cnt[10] <= 1;
     else
       cnt[10] <= _001_[10];
-  (* src = "<stdcells.v>:1368" *)
   always @(posedge clk_in or posedge rst)
     if (rst)
       cnt[11] <= 1;
     else
       cnt[11] <= _001_[11];
-  (* src = "<stdcells.v>:1368" *)
   always @(posedge clk_in or posedge rst)
     if (rst)
       cnt[12] <= 1;
     else
       cnt[12] <= _001_[12];
-  (* src = "<stdcells.v>:1368" *)
   always @(posedge clk_in or posedge rst)
     if (rst)
       cnt[13] <= 1;
     else
       cnt[13] <= _001_[13];
-  (* src = "<stdcells.v>:1368" *)
   always @(posedge clk_in or posedge rst)
     if (rst)
       cnt[14] <= 1;
     else
       cnt[14] <= _001_[14];
-  (* src = "<stdcells.v>:1368" *)
   always @(posedge clk_in or posedge rst)
     if (rst)
       cnt[15] <= 1;
     else
       cnt[15] <= _001_[15];
-  (* src = "<stdcells.v>:1368" *)
   always @(posedge clk_in or posedge rst)
     if (rst)
       cnt[1] <= 1;
     else
       cnt[1] <= _001_[1];
-  (* src = "<stdcells.v>:1368" *)
   always @(posedge clk_in or posedge rst)
     if (rst)
       cnt[2] <= 1;
     else
       cnt[2] <= _001_[2];
-  (* src = "<stdcells.v>:1368" *)
   always @(posedge clk_in or posedge rst)
     if (rst)
       cnt[3] <= 1;
     else
       cnt[3] <= _001_[3];
-  (* src = "<stdcells.v>:1368" *)
   always @(posedge clk_in or posedge rst)
     if (rst)
       cnt[4] <= 1;
     else
       cnt[4] <= _001_[4];
-  (* src = "<stdcells.v>:1368" *)
   always @(posedge clk_in or posedge rst)
     if (rst)
       cnt[5] <= 1;
     else
       cnt[5] <= _001_[5];
-  (* src = "<stdcells.v>:1368" *)
   always @(posedge clk_in or posedge rst)
     if (rst)
       cnt[6] <= 1;
     else
       cnt[6] <= _001_[6];
-  (* src = "<stdcells.v>:1368" *)
   always @(posedge clk_in or posedge rst)
     if (rst)
       cnt[7] <= 1;
     else
       cnt[7] <= _001_[7];
-  (* src = "<stdcells.v>:1368" *)
   always @(posedge clk_in or posedge rst)
     if (rst)
       cnt[8] <= 1;
     else
       cnt[8] <= _001_[8];
-  (* src = "<stdcells.v>:1368" *)
   always @(posedge clk_in or posedge rst)
     if (rst)
       cnt[9] <= 1;
     else
       cnt[9] <= _001_[9];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk_in or posedge rst)
     if (rst)
       clk_out <= 0;
     else
       clk_out <= _000_;
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk_in or posedge rst)
     if (rst)
       neg_edge <= 0;
     else
       neg_edge <= _002_;
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk_in or posedge rst)
     if (rst)
       pos_edge <= 0;
@@ -390,15 +356,10 @@ module spi_clgen(clk_in, rst, go, enable, last_clk, divider, clk_out, pos_edge, 
       pos_edge <= _003_;
 endmodule
 
-(* src = "rtl/spi_shift.v:44" *)
 module spi_shift(clk, rst, latch, byte_sel, len, lsb, go, pos_edge, neg_edge, rx_negedge, tx_negedge, tip, last, p_in, p_out, s_clk, s_in, s_out);
-  (* src = "rtl/spi_shift.v:92" *)
   wire [7:0] _0000_;
-  (* src = "rtl/spi_shift.v:126" *)
   wire [127:0] _0001_;
-  (* src = "rtl/spi_shift.v:117" *)
   wire _0002_;
-  (* src = "rtl/spi_shift.v:106" *)
   wire _0003_;
   wire _0004_;
   wire _0005_;
@@ -1874,47 +1835,27 @@ module spi_shift(clk, rst, latch, byte_sel, len, lsb, go, pos_edge, neg_edge, rx
   wire _1475_;
   wire _1476_;
   wire _1477_;
-  (* src = "rtl/spi_shift.v:54" *)
   input [3:0] byte_sel;
-  (* src = "rtl/spi_shift.v:51" *)
   input clk;
-  (* src = "rtl/spi_shift.v:73" *)
   reg [7:0] cnt;
-  (* src = "rtl/spi_shift.v:74" *)
   reg [127:0] data;
-  (* src = "rtl/spi_shift.v:57" *)
   input go;
-  (* src = "rtl/spi_shift.v:63" *)
   output last;
-  (* src = "rtl/spi_shift.v:53" *)
   input [3:0] latch;
-  (* src = "rtl/spi_shift.v:55" *)
   input [6:0] len;
-  (* src = "rtl/spi_shift.v:56" *)
   input lsb;
-  (* src = "rtl/spi_shift.v:59" *)
   input neg_edge;
-  (* src = "rtl/spi_shift.v:64" *)
   input [31:0] p_in;
-  (* src = "rtl/spi_shift.v:65" *)
   output [127:0] p_out;
-  (* src = "rtl/spi_shift.v:58" *)
   input pos_edge;
-  (* src = "rtl/spi_shift.v:52" *)
   input rst;
-  (* src = "rtl/spi_shift.v:60" *)
   input rx_negedge;
-  (* src = "rtl/spi_shift.v:66" *)
   input s_clk;
-  (* src = "rtl/spi_shift.v:67" *)
   input s_in;
-  (* src = "rtl/spi_shift.v:68" *)
   output s_out;
   reg s_out;
-  (* src = "rtl/spi_shift.v:62" *)
   output tip;
   reg tip;
-  (* src = "rtl/spi_shift.v:61" *)
   input tx_negedge;
   assign _0857_ = ~cnt[4];
   assign _0858_ = ~cnt[5];
@@ -3101,47 +3042,47 @@ module spi_shift(clk, rst, latch, byte_sel, len, lsb, go, pos_edge, neg_edge, rx
   assign _0472_ = _0471_ & tip;
   assign _0473_ = _0888_ & _0894_;
   assign _0474_ = _0473_ & _0877_;
-  assign _0475_ = _0917_ & _0912_;
-  assign _0476_ = _0900_ & _0906_;
-  assign _0477_ = _0476_ & _0475_;
-  assign _0478_ = _0477_ & _0474_;
-  assign _0479_ = len[0] & _0871_;
-  assign _0000_[0] = _0479_ | _0472_;
-  assign _0480_ = ~pos_edge;
-  assign _0481_ = ~_0913_;
-  assign _0482_ = _0480_ ? cnt[1] : _0481_;
-  assign _0483_ = _0482_ & tip;
+  assign _0475_ = _0900_ & _0906_;
+  assign _0476_ = len[0] & _0871_;
+  assign _0000_[0] = _0476_ | _0472_;
+  assign _0477_ = ~pos_edge;
+  assign _0478_ = ~_0913_;
+  assign _0479_ = _0477_ ? cnt[1] : _0478_;
+  assign _0480_ = _0479_ & tip;
+  assign _0481_ = _0912_ & _0917_;
+  assign _0482_ = _0475_ & _0481_;
+  assign _0483_ = _0482_ & _0474_;
   assign _0484_ = len[1] & _0871_;
-  assign _0000_[1] = _0484_ | _0483_;
+  assign _0000_[1] = _0484_ | _0480_;
   assign _0485_ = ~_0957_;
-  assign _0486_ = _0480_ ? cnt[2] : _0485_;
+  assign _0486_ = _0477_ ? cnt[2] : _0485_;
   assign _0487_ = _0486_ & tip;
   assign _0488_ = len[2] & _0871_;
   assign _0000_[2] = _0488_ | _0487_;
   assign _0489_ = ~_0951_;
-  assign _0490_ = _0480_ ? cnt[3] : _0489_;
+  assign _0490_ = _0477_ ? cnt[3] : _0489_;
   assign _0491_ = _0490_ & tip;
   assign _0492_ = len[3] & _0871_;
   assign _0000_[3] = _0492_ | _0491_;
   assign _0493_ = ~_0945_;
-  assign _0494_ = _0480_ ? cnt[4] : _0493_;
+  assign _0494_ = _0477_ ? cnt[4] : _0493_;
   assign _0495_ = _0494_ & tip;
   assign _0496_ = len[4] & _0871_;
   assign _0000_[4] = _0496_ | _0495_;
   assign _0497_ = ~_0941_;
-  assign _0498_ = _0480_ ? cnt[5] : _0497_;
+  assign _0498_ = _0477_ ? cnt[5] : _0497_;
   assign _0499_ = _0498_ & tip;
   assign _0500_ = len[5] & _0871_;
   assign _0000_[5] = _0500_ | _0499_;
   assign _0501_ = ~_0936_;
-  assign _0502_ = _0480_ ? cnt[6] : _0501_;
+  assign _0502_ = _0477_ ? cnt[6] : _0501_;
   assign _0503_ = _0502_ & tip;
   assign _0504_ = len[6] & _0871_;
   assign _0000_[6] = _0504_ | _0503_;
   assign _0505_ = _0935_ | cnt[6];
   assign _0506_ = _0505_ ^ _0861_;
-  assign _0507_ = _0480_ ? cnt[7] : _0506_;
-  assign _0000_[7] = _0871_ ? _0478_ : _0507_;
+  assign _0507_ = _0477_ ? cnt[7] : _0506_;
+  assign _0000_[7] = _0871_ ? _0483_ : _0507_;
   assign _0508_ = byte_sel[2] ? p_in[21] : data[21];
   assign _0509_ = _0217_ ? _1110_ : data[21];
   assign _0510_ = _0876_ ? data[21] : _0509_;
@@ -3172,7 +3113,7 @@ module spi_shift(clk, rst, latch, byte_sel, len, lsb, go, pos_edge, neg_edge, rx
   assign _0531_ = _0875_ ? data[9] : _0530_;
   assign _0532_ = _0874_ ? data[9] : _0531_;
   assign _0001_[9] = _0872_ ? _0528_ : _0532_;
-  assign _0533_ = _0480_ | _0871_;
+  assign _0533_ = _0477_ | _0871_;
   assign _0534_ = _0533_ | _0974_;
   assign _0003_ = _0871_ ? go : _0534_;
   assign _0535_ = byte_sel[1] ? p_in[10] : data[10];
@@ -3398,7 +3339,7 @@ module spi_shift(clk, rst, latch, byte_sel, len, lsb, go, pos_edge, neg_edge, rx
   assign _0724_ = _0707_ ^ _0702_;
   assign _0725_ = _0693_ ? _0485_ : _0724_;
   assign _0726_ = _0705_ ^ _0704_;
-  assign _0727_ = _0693_ ? _0481_ : _0726_;
+  assign _0727_ = _0693_ ? _0478_ : _0726_;
   assign _0728_ = len[0] ^ cnt[0];
   assign _0729_ = _0693_ ? _0864_ : _0728_;
   assign _0730_ = _0729_ ? data[127] : data[126];
@@ -3529,829 +3470,691 @@ module spi_shift(clk, rst, latch, byte_sel, len, lsb, go, pos_edge, neg_edge, rx
   assign _0855_ = _0719_ ? _0823_ : _0854_;
   assign _0856_ = _0717_ ? _0792_ : _0855_;
   assign _0002_ = _0692_ ? _0856_ : s_out;
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       tip <= 0;
     else
       tip <= _0003_;
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       s_out <= 0;
     else
       s_out <= _0002_;
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[0] <= 0;
     else
       data[0] <= _0001_[0];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[100] <= 0;
     else
       data[100] <= _0001_[100];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[101] <= 0;
     else
       data[101] <= _0001_[101];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[102] <= 0;
     else
       data[102] <= _0001_[102];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[103] <= 0;
     else
       data[103] <= _0001_[103];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[104] <= 0;
     else
       data[104] <= _0001_[104];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[105] <= 0;
     else
       data[105] <= _0001_[105];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[106] <= 0;
     else
       data[106] <= _0001_[106];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[107] <= 0;
     else
       data[107] <= _0001_[107];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[108] <= 0;
     else
       data[108] <= _0001_[108];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[109] <= 0;
     else
       data[109] <= _0001_[109];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[10] <= 0;
     else
       data[10] <= _0001_[10];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[110] <= 0;
     else
       data[110] <= _0001_[110];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[111] <= 0;
     else
       data[111] <= _0001_[111];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[112] <= 0;
     else
       data[112] <= _0001_[112];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[113] <= 0;
     else
       data[113] <= _0001_[113];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[114] <= 0;
     else
       data[114] <= _0001_[114];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[115] <= 0;
     else
       data[115] <= _0001_[115];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[116] <= 0;
     else
       data[116] <= _0001_[116];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[117] <= 0;
     else
       data[117] <= _0001_[117];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[118] <= 0;
     else
       data[118] <= _0001_[118];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[119] <= 0;
     else
       data[119] <= _0001_[119];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[11] <= 0;
     else
       data[11] <= _0001_[11];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[120] <= 0;
     else
       data[120] <= _0001_[120];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[121] <= 0;
     else
       data[121] <= _0001_[121];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[122] <= 0;
     else
       data[122] <= _0001_[122];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[123] <= 0;
     else
       data[123] <= _0001_[123];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[124] <= 0;
     else
       data[124] <= _0001_[124];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[125] <= 0;
     else
       data[125] <= _0001_[125];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[126] <= 0;
     else
       data[126] <= _0001_[126];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[127] <= 0;
     else
       data[127] <= _0001_[127];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[12] <= 0;
     else
       data[12] <= _0001_[12];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[13] <= 0;
     else
       data[13] <= _0001_[13];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[14] <= 0;
     else
       data[14] <= _0001_[14];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[15] <= 0;
     else
       data[15] <= _0001_[15];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[16] <= 0;
     else
       data[16] <= _0001_[16];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[17] <= 0;
     else
       data[17] <= _0001_[17];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[18] <= 0;
     else
       data[18] <= _0001_[18];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[19] <= 0;
     else
       data[19] <= _0001_[19];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[1] <= 0;
     else
       data[1] <= _0001_[1];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[20] <= 0;
     else
       data[20] <= _0001_[20];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[21] <= 0;
     else
       data[21] <= _0001_[21];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[22] <= 0;
     else
       data[22] <= _0001_[22];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[23] <= 0;
     else
       data[23] <= _0001_[23];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[24] <= 0;
     else
       data[24] <= _0001_[24];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[25] <= 0;
     else
       data[25] <= _0001_[25];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[26] <= 0;
     else
       data[26] <= _0001_[26];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[27] <= 0;
     else
       data[27] <= _0001_[27];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[28] <= 0;
     else
       data[28] <= _0001_[28];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[29] <= 0;
     else
       data[29] <= _0001_[29];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[2] <= 0;
     else
       data[2] <= _0001_[2];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[30] <= 0;
     else
       data[30] <= _0001_[30];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[31] <= 0;
     else
       data[31] <= _0001_[31];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[32] <= 0;
     else
       data[32] <= _0001_[32];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[33] <= 0;
     else
       data[33] <= _0001_[33];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[34] <= 0;
     else
       data[34] <= _0001_[34];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[35] <= 0;
     else
       data[35] <= _0001_[35];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[36] <= 0;
     else
       data[36] <= _0001_[36];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[37] <= 0;
     else
       data[37] <= _0001_[37];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[38] <= 0;
     else
       data[38] <= _0001_[38];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[39] <= 0;
     else
       data[39] <= _0001_[39];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[3] <= 0;
     else
       data[3] <= _0001_[3];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[40] <= 0;
     else
       data[40] <= _0001_[40];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[41] <= 0;
     else
       data[41] <= _0001_[41];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[42] <= 0;
     else
       data[42] <= _0001_[42];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[43] <= 0;
     else
       data[43] <= _0001_[43];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[44] <= 0;
     else
       data[44] <= _0001_[44];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[45] <= 0;
     else
       data[45] <= _0001_[45];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[46] <= 0;
     else
       data[46] <= _0001_[46];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[47] <= 0;
     else
       data[47] <= _0001_[47];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[48] <= 0;
     else
       data[48] <= _0001_[48];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[49] <= 0;
     else
       data[49] <= _0001_[49];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[4] <= 0;
     else
       data[4] <= _0001_[4];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[50] <= 0;
     else
       data[50] <= _0001_[50];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[51] <= 0;
     else
       data[51] <= _0001_[51];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[52] <= 0;
     else
       data[52] <= _0001_[52];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[53] <= 0;
     else
       data[53] <= _0001_[53];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[54] <= 0;
     else
       data[54] <= _0001_[54];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[55] <= 0;
     else
       data[55] <= _0001_[55];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[56] <= 0;
     else
       data[56] <= _0001_[56];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[57] <= 0;
     else
       data[57] <= _0001_[57];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[58] <= 0;
     else
       data[58] <= _0001_[58];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[59] <= 0;
     else
       data[59] <= _0001_[59];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[5] <= 0;
     else
       data[5] <= _0001_[5];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[60] <= 0;
     else
       data[60] <= _0001_[60];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[61] <= 0;
     else
       data[61] <= _0001_[61];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[62] <= 0;
     else
       data[62] <= _0001_[62];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[63] <= 0;
     else
       data[63] <= _0001_[63];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[64] <= 0;
     else
       data[64] <= _0001_[64];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[65] <= 0;
     else
       data[65] <= _0001_[65];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[66] <= 0;
     else
       data[66] <= _0001_[66];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[67] <= 0;
     else
       data[67] <= _0001_[67];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[68] <= 0;
     else
       data[68] <= _0001_[68];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[69] <= 0;
     else
       data[69] <= _0001_[69];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[6] <= 0;
     else
       data[6] <= _0001_[6];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[70] <= 0;
     else
       data[70] <= _0001_[70];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[71] <= 0;
     else
       data[71] <= _0001_[71];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[72] <= 0;
     else
       data[72] <= _0001_[72];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[73] <= 0;
     else
       data[73] <= _0001_[73];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[74] <= 0;
     else
       data[74] <= _0001_[74];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[75] <= 0;
     else
       data[75] <= _0001_[75];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[76] <= 0;
     else
       data[76] <= _0001_[76];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[77] <= 0;
     else
       data[77] <= _0001_[77];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[78] <= 0;
     else
       data[78] <= _0001_[78];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[79] <= 0;
     else
       data[79] <= _0001_[79];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[7] <= 0;
     else
       data[7] <= _0001_[7];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[80] <= 0;
     else
       data[80] <= _0001_[80];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[81] <= 0;
     else
       data[81] <= _0001_[81];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[82] <= 0;
     else
       data[82] <= _0001_[82];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[83] <= 0;
     else
       data[83] <= _0001_[83];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[84] <= 0;
     else
       data[84] <= _0001_[84];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[85] <= 0;
     else
       data[85] <= _0001_[85];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[86] <= 0;
     else
       data[86] <= _0001_[86];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[87] <= 0;
     else
       data[87] <= _0001_[87];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[88] <= 0;
     else
       data[88] <= _0001_[88];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[89] <= 0;
     else
       data[89] <= _0001_[89];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[8] <= 0;
     else
       data[8] <= _0001_[8];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[90] <= 0;
     else
       data[90] <= _0001_[90];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[91] <= 0;
     else
       data[91] <= _0001_[91];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[92] <= 0;
     else
       data[92] <= _0001_[92];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[93] <= 0;
     else
       data[93] <= _0001_[93];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[94] <= 0;
     else
       data[94] <= _0001_[94];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[95] <= 0;
     else
       data[95] <= _0001_[95];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[96] <= 0;
     else
       data[96] <= _0001_[96];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[97] <= 0;
     else
       data[97] <= _0001_[97];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[98] <= 0;
     else
       data[98] <= _0001_[98];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[99] <= 0;
     else
       data[99] <= _0001_[99];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       data[9] <= 0;
     else
       data[9] <= _0001_[9];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       cnt[0] <= 0;
     else
       cnt[0] <= _0000_[0];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       cnt[1] <= 0;
     else
       cnt[1] <= _0000_[1];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       cnt[2] <= 0;
     else
       cnt[2] <= _0000_[2];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       cnt[3] <= 0;
     else
       cnt[3] <= _0000_[3];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       cnt[4] <= 0;
     else
       cnt[4] <= _0000_[4];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       cnt[5] <= 0;
     else
       cnt[5] <= _0000_[5];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       cnt[6] <= 0;
     else
       cnt[6] <= _0000_[6];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge clk or posedge rst)
     if (rst)
       cnt[7] <= 0;
@@ -4360,17 +4163,11 @@ module spi_shift(clk, rst, latch, byte_sel, len, lsb, go, pos_edge, neg_edge, rx
   assign p_out = data;
 endmodule
 
-(* src = "rtl/spi_top.v:45" *)
 module spi_top(wb_clk_i, wb_rst_i, wb_adr_i, wb_dat_i, wb_dat_o, wb_sel_i, wb_we_i, wb_stb_i, wb_cyc_i, wb_ack_o, wb_err_o, wb_int_o, ss_pad_o, sclk_pad_o, mosi_pad_o, miso_pad_i);
-  (* src = "rtl/spi_top.v:212" *)
   wire [13:0] _000_;
-  (* src = "rtl/spi_top.v:174" *)
   wire [15:0] _001_;
-  (* src = "rtl/spi_top.v:236" *)
   wire [7:0] _002_;
-  (* src = "rtl/spi_top.v:151" *)
   wire _003_;
-  (* src = "rtl/spi_top.v:163" *)
   wire _004_;
   wire _005_;
   wire _006_;
@@ -4777,77 +4574,44 @@ module spi_top(wb_clk_i, wb_rst_i, wb_adr_i, wb_dat_i, wb_dat_o, wb_sel_i, wb_we
   wire _407_;
   wire _408_;
   wire _409_;
-  (* src = "<stdcells.v>:123" *)
   wire [3:0] _410_;
-  (* src = "rtl/spi_top.v:93" *)
   reg ass;
-  (* src = "rtl/spi_top.v:89" *)
   reg [6:0] char_len;
-  (* src = "rtl/spi_top.v:83" *)
   wire [13:0] ctrl;
-  (* src = "rtl/spi_top.v:82" *)
   reg [15:0] divider;
-  (* src = "rtl/spi_top.v:90" *)
   wire go;
-  (* src = "rtl/spi_top.v:92" *)
   wire ie;
-  (* src = "rtl/spi_top.v:101" *)
   wire last_bit;
-  (* src = "rtl/spi_top.v:91" *)
   wire lsb;
-  (* src = "rtl/spi_top.v:75" *)
   input miso_pad_i;
-  (* src = "rtl/spi_top.v:74" *)
   output mosi_pad_o;
-  (* src = "rtl/spi_top.v:100" *)
   wire neg_edge;
-  (* src = "rtl/spi_top.v:99" *)
   wire pos_edge;
-  (* src = "rtl/spi_top.v:86" *)
   wire [127:0] rx;
-  (* src = "rtl/spi_top.v:87" *)
   wire rx_negedge;
-  (* src = "rtl/spi_top.v:73" *)
   output sclk_pad_o;
-  (* src = "rtl/spi_top.v:84" *)
   reg [7:0] ss;
-  (* src = "rtl/spi_top.v:72" *)
   output [7:0] ss_pad_o;
-  (* src = "rtl/spi_top.v:98" *)
   wire tip;
-  (* src = "rtl/spi_top.v:88" *)
   wire tx_negedge;
-  (* src = "rtl/spi_top.v:67" *)
   output wb_ack_o;
   reg wb_ack_o;
-  (* src = "rtl/spi_top.v:60" *)
   input [4:0] wb_adr_i;
-  (* src = "rtl/spi_top.v:58" *)
   input wb_clk_i;
-  (* src = "rtl/spi_top.v:66" *)
   input wb_cyc_i;
-  (* src = "rtl/spi_top.v:85" *)
   wire [31:0] wb_dat;
-  (* src = "rtl/spi_top.v:61" *)
   input [31:0] wb_dat_i;
-  (* src = "rtl/spi_top.v:62" *)
   output [31:0] wb_dat_o;
   reg [31:0] wb_dat_o;
-  (* src = "rtl/spi_top.v:68" *)
   output wb_err_o;
-  (* src = "rtl/spi_top.v:69" *)
   output wb_int_o;
   reg wb_int_o;
-  (* src = "rtl/spi_top.v:59" *)
   input wb_rst_i;
-  (* src = "rtl/spi_top.v:63" *)
   input [3:0] wb_sel_i;
-  (* src = "rtl/spi_top.v:65" *)
   input wb_stb_i;
-  (* src = "rtl/spi_top.v:64" *)
   input wb_we_i;
   assign _005_ = ~wb_ack_o;
-  assign _006_ = wb_stb_i & wb_cyc_i;
+  assign _006_ = wb_cyc_i & wb_stb_i;
   assign _003_ = _006_ & _005_;
   assign _007_ = ~wb_adr_i[4];
   assign _008_ = ~wb_adr_i[3];
@@ -4866,8 +4630,8 @@ module spi_top(wb_clk_i, wb_rst_i, wb_adr_i, wb_dat_i, wb_dat_o, wb_sel_i, wb_we
   assign _018_ = _017_ & _007_;
   assign _410_[3] = _018_ & _012_;
   assign _019_ = ~ss[0];
-  assign _020_ = ~tip;
-  assign _021_ = ~ass;
+  assign _020_ = ~ass;
+  assign _021_ = ~tip;
   assign _022_ = _021_ | _020_;
   assign _023_ = _022_ | _019_;
   assign _024_ = _019_ | ass;
@@ -4947,7 +4711,7 @@ module spi_top(wb_clk_i, wb_rst_i, wb_adr_i, wb_dat_i, wb_dat_o, wb_sel_i, wb_we
   assign _073_ = _010_ & wb_adr_i[4];
   assign _074_ = ~_073_;
   assign _075_ = _074_ | _055_;
-  assign _076_ = char_len[0] | wb_dat_i[0];
+  assign _076_ = wb_dat_i[0] | char_len[0];
   assign _077_ = wb_sel_i[0] ? _076_ : char_len[0];
   assign _000_[0] = _075_ ? char_len[0] : _077_;
   assign _078_ = wb_sel_i[0] ? wb_dat_i[1] : char_len[1];
@@ -4967,7 +4731,7 @@ module spi_top(wb_clk_i, wb_rst_i, wb_adr_i, wb_dat_i, wb_dat_o, wb_sel_i, wb_we
   assign _085_ = wb_sel_i[1] ? wb_dat_i[8] : ctrl[8];
   assign _086_ = ~pos_edge;
   assign _087_ = ~last_bit;
-  assign _088_ = _087_ | _020_;
+  assign _088_ = _087_ | _021_;
   assign _089_ = _088_ | _086_;
   assign _090_ = _089_ & ctrl[8];
   assign _000_[8] = _075_ ? _090_ : _085_;
@@ -5335,314 +5099,262 @@ module spi_top(wb_clk_i, wb_rst_i, wb_adr_i, wb_dat_i, wb_dat_o, wb_sel_i, wb_we
   assign _408_ = _407_ | _404_;
   assign _409_ = _408_ | _401_;
   assign wb_dat[9] = _409_ & _109_;
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[0] <= 0;
     else
       wb_dat_o[0] <= wb_dat[0];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[10] <= 0;
     else
       wb_dat_o[10] <= wb_dat[10];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[11] <= 0;
     else
       wb_dat_o[11] <= wb_dat[11];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[12] <= 0;
     else
       wb_dat_o[12] <= wb_dat[12];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[13] <= 0;
     else
       wb_dat_o[13] <= wb_dat[13];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[14] <= 0;
     else
       wb_dat_o[14] <= wb_dat[14];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[15] <= 0;
     else
       wb_dat_o[15] <= wb_dat[15];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[16] <= 0;
     else
       wb_dat_o[16] <= wb_dat[16];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[17] <= 0;
     else
       wb_dat_o[17] <= wb_dat[17];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[18] <= 0;
     else
       wb_dat_o[18] <= wb_dat[18];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[19] <= 0;
     else
       wb_dat_o[19] <= wb_dat[19];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[1] <= 0;
     else
       wb_dat_o[1] <= wb_dat[1];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[20] <= 0;
     else
       wb_dat_o[20] <= wb_dat[20];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[21] <= 0;
     else
       wb_dat_o[21] <= wb_dat[21];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[22] <= 0;
     else
       wb_dat_o[22] <= wb_dat[22];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[23] <= 0;
     else
       wb_dat_o[23] <= wb_dat[23];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[24] <= 0;
     else
       wb_dat_o[24] <= wb_dat[24];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[25] <= 0;
     else
       wb_dat_o[25] <= wb_dat[25];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[26] <= 0;
     else
       wb_dat_o[26] <= wb_dat[26];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[27] <= 0;
     else
       wb_dat_o[27] <= wb_dat[27];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[28] <= 0;
     else
       wb_dat_o[28] <= wb_dat[28];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[29] <= 0;
     else
       wb_dat_o[29] <= wb_dat[29];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[2] <= 0;
     else
       wb_dat_o[2] <= wb_dat[2];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[30] <= 0;
     else
       wb_dat_o[30] <= wb_dat[30];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[31] <= 0;
     else
       wb_dat_o[31] <= wb_dat[31];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[3] <= 0;
     else
       wb_dat_o[3] <= wb_dat[3];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[4] <= 0;
     else
       wb_dat_o[4] <= wb_dat[4];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[5] <= 0;
     else
       wb_dat_o[5] <= wb_dat[5];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[6] <= 0;
     else
       wb_dat_o[6] <= wb_dat[6];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[7] <= 0;
     else
       wb_dat_o[7] <= wb_dat[7];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[8] <= 0;
     else
       wb_dat_o[8] <= wb_dat[8];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_dat_o[9] <= 0;
     else
       wb_dat_o[9] <= wb_dat[9];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_ack_o <= 0;
     else
       wb_ack_o <= _003_;
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       wb_int_o <= 0;
     else
       wb_int_o <= _004_;
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       divider[0] <= 0;
     else
       divider[0] <= _001_[0];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       divider[10] <= 0;
     else
       divider[10] <= _001_[10];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       divider[11] <= 0;
     else
       divider[11] <= _001_[11];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       divider[12] <= 0;
     else
       divider[12] <= _001_[12];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       divider[13] <= 0;
     else
       divider[13] <= _001_[13];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       divider[14] <= 0;
     else
       divider[14] <= _001_[14];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       divider[15] <= 0;
     else
       divider[15] <= _001_[15];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       divider[1] <= 0;
     else
       divider[1] <= _001_[1];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       divider[2] <= 0;
     else
       divider[2] <= _001_[2];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       divider[3] <= 0;
     else
       divider[3] <= _001_[3];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       divider[4] <= 0;
     else
       divider[4] <= _001_[4];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       divider[5] <= 0;
     else
       divider[5] <= _001_[5];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       divider[6] <= 0;
     else
       divider[6] <= _001_[6];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       divider[7] <= 0;
     else
       divider[7] <= _001_[7];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       divider[8] <= 0;
     else
       divider[8] <= _001_[8];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       divider[9] <= 0;
     else
       divider[9] <= _001_[9];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       char_len[0] <= 0;
     else
       char_len[0] <= _000_[0];
   reg \ctrl_reg[10] ;
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       \ctrl_reg[10]  <= 0;
@@ -5650,7 +5362,6 @@ module spi_top(wb_clk_i, wb_rst_i, wb_adr_i, wb_dat_i, wb_dat_o, wb_sel_i, wb_we
       \ctrl_reg[10]  <= _000_[10];
   assign ctrl[10] = \ctrl_reg[10] ;
   reg \ctrl_reg[11] ;
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       \ctrl_reg[11]  <= 0;
@@ -5658,57 +5369,48 @@ module spi_top(wb_clk_i, wb_rst_i, wb_adr_i, wb_dat_i, wb_dat_o, wb_sel_i, wb_we
       \ctrl_reg[11]  <= _000_[11];
   assign ctrl[11] = \ctrl_reg[11] ;
   reg \ctrl_reg[12] ;
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       \ctrl_reg[12]  <= 0;
     else
       \ctrl_reg[12]  <= _000_[12];
   assign ctrl[12] = \ctrl_reg[12] ;
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       ass <= 0;
     else
       ass <= _000_[13];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       char_len[1] <= 0;
     else
       char_len[1] <= _000_[1];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       char_len[2] <= 0;
     else
       char_len[2] <= _000_[2];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       char_len[3] <= 0;
     else
       char_len[3] <= _000_[3];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       char_len[4] <= 0;
     else
       char_len[4] <= _000_[4];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       char_len[5] <= 0;
     else
       char_len[5] <= _000_[5];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       char_len[6] <= 0;
     else
       char_len[6] <= _000_[6];
   reg \ctrl_reg[7] ;
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       \ctrl_reg[7]  <= 0;
@@ -5716,7 +5418,6 @@ module spi_top(wb_clk_i, wb_rst_i, wb_adr_i, wb_dat_i, wb_dat_o, wb_sel_i, wb_we
       \ctrl_reg[7]  <= _000_[7];
   assign ctrl[7] = \ctrl_reg[7] ;
   reg \ctrl_reg[8] ;
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       \ctrl_reg[8]  <= 0;
@@ -5724,62 +5425,52 @@ module spi_top(wb_clk_i, wb_rst_i, wb_adr_i, wb_dat_i, wb_dat_o, wb_sel_i, wb_we
       \ctrl_reg[8]  <= _000_[8];
   assign ctrl[8] = \ctrl_reg[8] ;
   reg \ctrl_reg[9] ;
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       \ctrl_reg[9]  <= 0;
     else
       \ctrl_reg[9]  <= _000_[9];
   assign ctrl[9] = \ctrl_reg[9] ;
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       ss[0] <= 0;
     else
       ss[0] <= _002_[0];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       ss[1] <= 0;
     else
       ss[1] <= _002_[1];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       ss[2] <= 0;
     else
       ss[2] <= _002_[2];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       ss[3] <= 0;
     else
       ss[3] <= _002_[3];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       ss[4] <= 0;
     else
       ss[4] <= _002_[4];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       ss[5] <= 0;
     else
       ss[5] <= _002_[5];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       ss[6] <= 0;
     else
       ss[6] <= _002_[6];
-  (* src = "<stdcells.v>:1361" *)
   always @(posedge wb_clk_i or posedge wb_rst_i)
     if (wb_rst_i)
       ss[7] <= 0;
     else
       ss[7] <= _002_[7];
-  (* src = "rtl/spi_top.v:275" *)
   spi_clgen clgen (
     .clk_in(wb_clk_i),
     .clk_out(sclk_pad_o),
@@ -5791,7 +5482,6 @@ module spi_top(wb_clk_i, wb_rst_i, wb_adr_i, wb_dat_i, wb_dat_o, wb_sel_i, wb_we
     .pos_edge(pos_edge),
     .rst(wb_rst_i)
   );
-  (* src = "rtl/spi_top.v:279" *)
   spi_shift shift (
     .byte_sel(wb_sel_i),
     .clk(wb_clk_i),

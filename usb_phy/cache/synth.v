@@ -1,8 +1,5 @@
-(* src = "rtl/usb_phy.v:77" *)
 module usb_phy(clk, rst, phy_tx_mode, usb_rst, txdp, txdn, txoe, rxd, rxdp, rxdn, DataOut_i, TxValid_i, TxReady_o, RxValid_o, RxActive_o, RxError_o, DataIn_o, LineState_o);
-  (* src = "rtl/usb_phy.v:172" *)
   wire [4:0] _00_;
-  (* src = "rtl/usb_phy.v:180" *)
   wire _01_;
   wire _02_;
   wire _03_;
@@ -23,53 +20,33 @@ module usb_phy(clk, rst, phy_tx_mode, usb_rst, txdp, txdn, txoe, rxd, rxdp, rxdn
   wire _18_;
   wire _19_;
   wire _20_;
-  (* src = "rtl/usb_phy.v:97" *)
   output [7:0] DataIn_o;
-  (* src = "rtl/usb_phy.v:94" *)
   input [7:0] DataOut_i;
-  (* src = "rtl/usb_phy.v:101" *)
   output [1:0] LineState_o;
-  (* src = "rtl/usb_phy.v:99" *)
   output RxActive_o;
-  (* src = "rtl/usb_phy.v:100" *)
   output RxError_o;
-  (* src = "rtl/usb_phy.v:98" *)
   output RxValid_o;
-  (* src = "rtl/usb_phy.v:96" *)
   output TxReady_o;
-  (* src = "rtl/usb_phy.v:95" *)
   input TxValid_i;
-  (* src = "rtl/usb_phy.v:88" *)
   input clk;
-  (* src = "rtl/usb_phy.v:110" *)
   wire fs_ce;
-  (* src = "rtl/usb_phy.v:90" *)
   input phy_tx_mode;
-  (* src = "rtl/usb_phy.v:89" *)
   input rst;
-  (* src = "rtl/usb_phy.v:108" *)
   reg [4:0] rst_cnt;
-  (* src = "rtl/usb_phy.v:93" *)
   input rxd;
-  (* src = "rtl/usb_phy.v:93" *)
   input rxdn;
-  (* src = "rtl/usb_phy.v:93" *)
   input rxdp;
-  (* src = "rtl/usb_phy.v:92" *)
   output txdn;
-  (* src = "rtl/usb_phy.v:92" *)
   output txdp;
-  (* src = "rtl/usb_phy.v:92" *)
   output txoe;
-  (* src = "rtl/usb_phy.v:91" *)
   output usb_rst;
   reg usb_rst;
   assign _02_ = ~rst_cnt[0];
   assign _03_ = ~fs_ce;
   assign _04_ = usb_rst | _03_;
   assign _05_ = _04_ ^ _02_;
-  assign _06_ = ~LineState_o[1];
-  assign _07_ = ~LineState_o[0];
+  assign _06_ = ~LineState_o[0];
+  assign _07_ = ~LineState_o[1];
   assign _08_ = _07_ & _06_;
   assign _09_ = _08_ & rst;
   assign _00_[0] = _09_ & _05_;
@@ -89,25 +66,18 @@ module usb_phy(clk, rst, phy_tx_mode, usb_rst, txdp, txdn, txoe, rxd, rxdp, rxdn
   assign _20_ = _04_ ? rst_cnt[4] : _19_;
   assign _00_[4] = _20_ & _09_;
   assign _01_ = _18_ & rst_cnt[4];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rst_cnt[0] <= _00_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rst_cnt[1] <= _00_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rst_cnt[2] <= _00_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rst_cnt[3] <= _00_[3];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rst_cnt[4] <= _00_[4];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       usb_rst <= _01_;
-  (* src = "rtl/usb_phy.v:145" *)
   usb_rx_phy i_rx_phy (
     .DataIn_o(DataIn_o),
     .LineState(LineState_o),
@@ -122,7 +92,6 @@ module usb_phy(clk, rst, phy_tx_mode, usb_rst, txdp, txdn, txoe, rxd, rxdp, rxdn
     .rxdn(rxdn),
     .rxdp(rxdp)
   );
-  (* src = "rtl/usb_phy.v:123" *)
   usb_tx_phy i_tx_phy (
     .DataOut_i(DataOut_i),
     .TxReady_o(TxReady_o),
@@ -137,49 +106,27 @@ module usb_phy(clk, rst, phy_tx_mode, usb_rst, txdp, txdn, txoe, rxd, rxdp, rxdn
   );
 endmodule
 
-(* src = "rtl/usb_rx_phy.v:79" *)
 module usb_rx_phy(clk, rst, fs_ce, rxd, rxdp, rxdn, RxValid_o, RxActive_o, RxError_o, DataIn_o, RxEn_i, LineState);
-  (* src = "rtl/usb_rx_phy.v:426" *)
   wire [2:0] _000_;
-  (* src = "rtl/usb_rx_phy.v:404" *)
   wire _001_;
-  (* src = "rtl/usb_rx_phy.v:449" *)
   wire _002_;
-  (* src = "rtl/usb_rx_phy.v:206" *)
   wire [1:0] _003_;
-  (* src = "rtl/usb_rx_phy.v:258" *)
   wire [2:0] _004_;
-  (* src = "rtl/usb_rx_phy.v:414" *)
   wire [7:0] _005_;
-  (* src = "rtl/usb_rx_phy.v:390" *)
   wire [2:0] _006_;
-  (* src = "rtl/usb_rx_phy.v:350" *)
   wire _007_;
-  (* src = "rtl/usb_rx_phy.v:437" *)
   wire _008_;
-  (* src = "rtl/usb_rx_phy.v:445" *)
   wire _009_;
-  (* src = "rtl/usb_rx_phy.v:358" *)
   wire _010_;
-  (* src = "rtl/usb_rx_phy.v:159" *)
   wire _011_;
-  (* src = "rtl/usb_rx_phy.v:172" *)
   wire _012_;
-  (* src = "rtl/usb_rx_phy.v:171" *)
   wire _013_;
-  (* src = "rtl/usb_rx_phy.v:167" *)
   wire _014_;
-  (* src = "rtl/usb_rx_phy.v:166" *)
   wire _015_;
-  (* src = "rtl/usb_rx_phy.v:374" *)
   wire _016_;
-  (* src = "rtl/usb_rx_phy.v:368" *)
   wire _017_;
-  (* src = "rtl/usb_rx_phy.v:178" *)
   wire _018_;
-  (* src = "rtl/usb_rx_phy.v:411" *)
   wire _019_;
-  (* src = "rtl/usb_rx_phy.v:145" *)
   wire _020_;
   wire _021_;
   wire _022_;
@@ -342,104 +289,57 @@ module usb_rx_phy(clk, rst, fs_ce, rxd, rxdp, rxdn, RxValid_o, RxActive_o, RxErr
   wire _179_;
   wire _180_;
   wire _181_;
-  (* src = "rtl/usb_rx_phy.v:92" *)
   output [7:0] DataIn_o;
   reg [7:0] DataIn_o;
-  (* src = "rtl/usb_rx_phy.v:97" *)
   output [1:0] LineState;
   reg [1:0] LineState;
-  (* src = "rtl/usb_rx_phy.v:94" *)
   output RxActive_o;
   reg RxActive_o;
-  (* src = "rtl/usb_rx_phy.v:96" *)
   input RxEn_i;
-  (* src = "rtl/usb_rx_phy.v:95" *)
   output RxError_o;
-  (* src = "rtl/usb_rx_phy.v:93" *)
   output RxValid_o;
   reg RxValid_o;
-  (* src = "rtl/usb_rx_phy.v:112" *)
   reg [2:0] bit_cnt;
-  (* src = "rtl/usb_rx_phy.v:129" *)
   reg bit_stuff_err;
-  (* src = "rtl/usb_rx_phy.v:130" *)
   reg byte_err;
-  (* src = "rtl/usb_rx_phy.v:88" *)
   input clk;
-  (* src = "rtl/usb_rx_phy.v:121" *)
   reg [1:0] dpll_state;
-  (* src = "rtl/usb_rx_phy.v:90" *)
   output fs_ce;
   reg fs_ce;
-  (* src = "rtl/usb_rx_phy.v:122" *)
   wire fs_ce_d;
-  (* src = "rtl/usb_rx_phy.v:234" *)
   reg fs_ce_r1;
-  (* src = "rtl/usb_rx_phy.v:234" *)
   reg fs_ce_r2;
-  (* src = "rtl/usb_rx_phy.v:126" *)
   reg [2:0] fs_state;
-  (* src = "rtl/usb_rx_phy.v:117" *)
   wire [7:0] hold_reg;
-  (* src = "rtl/usb_rx_phy.v:125" *)
   reg lock_en;
-  (* src = "rtl/usb_rx_phy.v:119" *)
   reg [2:0] one_cnt;
-  (* src = "rtl/usb_rx_phy.v:89" *)
   input rst;
-  (* src = "rtl/usb_rx_phy.v:111" *)
   wire rx_active;
-  (* src = "rtl/usb_rx_phy.v:110" *)
   wire rx_en;
-  (* src = "rtl/usb_rx_phy.v:113" *)
   wire rx_valid;
-  (* src = "rtl/usb_rx_phy.v:113" *)
   reg rx_valid1;
-  (* src = "rtl/usb_rx_phy.v:127" *)
   reg rx_valid_r;
-  (* src = "rtl/usb_rx_phy.v:91" *)
   input rxd;
-  (* src = "rtl/usb_rx_phy.v:109" *)
   reg rxd_r;
-  (* src = "rtl/usb_rx_phy.v:104" *)
   reg rxd_s;
-  (* src = "rtl/usb_rx_phy.v:104" *)
   reg rxd_s0;
-  (* src = "rtl/usb_rx_phy.v:104" *)
   reg rxd_s1;
-  (* src = "rtl/usb_rx_phy.v:91" *)
   input rxdn;
-  (* src = "rtl/usb_rx_phy.v:106" *)
   reg rxdn_s;
-  (* src = "rtl/usb_rx_phy.v:106" *)
   reg rxdn_s0;
-  (* src = "rtl/usb_rx_phy.v:106" *)
   wire rxdn_s1;
-  (* src = "rtl/usb_rx_phy.v:106" *)
   reg rxdn_s_r;
-  (* src = "rtl/usb_rx_phy.v:91" *)
   input rxdp;
-  (* src = "rtl/usb_rx_phy.v:105" *)
   reg rxdp_s;
-  (* src = "rtl/usb_rx_phy.v:105" *)
   reg rxdp_s0;
-  (* src = "rtl/usb_rx_phy.v:105" *)
   wire rxdp_s1;
-  (* src = "rtl/usb_rx_phy.v:105" *)
   reg rxdp_s_r;
-  (* src = "rtl/usb_rx_phy.v:116" *)
   reg sd_nrzi;
-  (* src = "rtl/usb_rx_phy.v:115" *)
   reg sd_r;
-  (* src = "rtl/usb_rx_phy.v:108" *)
   wire se0;
-  (* src = "rtl/usb_rx_phy.v:130" *)
   reg se0_r;
-  (* src = "rtl/usb_rx_phy.v:131" *)
   reg se0_s;
-  (* src = "rtl/usb_rx_phy.v:114" *)
   reg shift_en;
-  (* src = "rtl/usb_rx_phy.v:128" *)
   reg sync_err;
   assign _166_ = ~fs_state[0];
   assign _167_ = ~fs_state[1];
@@ -477,8 +377,8 @@ module usb_rx_phy(clk, rst, fs_ce, rxd, rxdp, rxdn, RxValid_o, RxActive_o, RxErr
   assign _038_ = _037_ & _034_;
   assign _039_ = _038_ & _032_;
   assign _020_ = _039_ & _030_;
-  assign _015_ = LineState[0] & rxdp_s0;
-  assign _013_ = LineState[1] & rxdn_s0;
+  assign _015_ = rxdp_s0 & LineState[0];
+  assign _013_ = rxdn_s0 & LineState[1];
   assign se0 = ~_034_;
   assign _040_ = ~one_cnt[0];
   assign _041_ = one_cnt[1] & _040_;
@@ -496,8 +396,8 @@ module usb_rx_phy(clk, rst, fs_ce, rxd, rxdp, rxdn, RxValid_o, RxActive_o, RxErr
   assign _051_ = _050_ & RxActive_o;
   assign _052_ = _051_ & se0;
   assign _002_ = _052_ & _049_;
-  assign _053_ = sync_err | byte_err;
-  assign RxError_o = _053_ | bit_stuff_err;
+  assign _053_ = bit_stuff_err | byte_err;
+  assign RxError_o = _053_ | sync_err;
   assign _014_ = _015_ | rxdp_s_r;
   assign _012_ = _013_ | rxdn_s_r;
   assign _054_ = _022_ & rxdn_s;
@@ -523,10 +423,10 @@ module usb_rx_phy(clk, rst, fs_ce, rxd, rxdp, rxdn, RxValid_o, RxActive_o, RxErr
   assign _010_ = _072_ | RxValid_o;
   assign _017_ = fs_ce ? rxd_s : sd_r;
   assign _073_ = ~rxd_s;
-  assign _074_ = _073_ | sd_r;
+  assign _074_ = sd_r | _073_;
   assign _075_ = RxActive_o & fs_ce;
   assign _076_ = ~sd_r;
-  assign _077_ = rxd_s | _076_;
+  assign _077_ = _076_ | rxd_s;
   assign _078_ = _077_ & _075_;
   assign _079_ = _078_ & _074_;
   assign _080_ = ~_075_;
@@ -582,8 +482,8 @@ module usb_rx_phy(clk, rst, fs_ce, rxd, rxdp, rxdn, RxValid_o, RxActive_o, RxErr
   assign _114_ = _048_ & rx_valid1;
   assign _115_ = _114_ | _113_;
   assign _008_ = _115_ & rst;
-  assign _116_ = rxd_s1 & rxd_s0;
-  assign _117_ = rxd_s1 | rxd_s0;
+  assign _116_ = rxd_s0 & rxd_s1;
+  assign _117_ = rxd_s0 | rxd_s1;
   assign _118_ = ~_116_;
   assign _119_ = _118_ & rxd_s;
   assign _120_ = _119_ & _117_;
@@ -640,145 +540,98 @@ module usb_rx_phy(clk, rst, fs_ce, rxd, rxdp, rxdn, RxValid_o, RxActive_o, RxErr
   assign _164_ = _147_ & fs_state[2];
   assign _165_ = _164_ | _163_;
   assign _004_[2] = _165_ & rst;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       lock_en <= RxEn_i;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       sync_err <= _020_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rxd_s0 <= rxd;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rxd_s1 <= rxd_s0;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rxd_s <= _011_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rxdp_s0 <= rxdp;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       LineState[0] <= rxdp_s0;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rxdp_s_r <= _015_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rxdp_s <= _014_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rxdn_s0 <= rxdn;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       LineState[1] <= rxdn_s0;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rxdn_s_r <= _013_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rxdn_s <= _012_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       se0_s <= _018_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rxd_r <= rxd_s;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       dpll_state[0] <= _003_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       dpll_state[1] <= _003_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       fs_ce_r1 <= fs_ce_d;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       fs_ce_r2 <= fs_ce_r1;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       fs_ce <= fs_ce_r2;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       fs_state[0] <= _004_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       fs_state[1] <= _004_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       fs_state[2] <= _004_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       RxActive_o <= _007_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_valid_r <= _010_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       sd_r <= _017_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       sd_nrzi <= _016_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       one_cnt[0] <= _006_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       one_cnt[1] <= _006_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       one_cnt[2] <= _006_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       bit_stuff_err <= _001_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       shift_en <= _019_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       DataIn_o[0] <= _005_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       DataIn_o[1] <= _005_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       DataIn_o[2] <= _005_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       DataIn_o[3] <= _005_[3];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       DataIn_o[4] <= _005_[4];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       DataIn_o[5] <= _005_[5];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       DataIn_o[6] <= _005_[6];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       DataIn_o[7] <= _005_[7];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       bit_cnt[0] <= _000_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       bit_cnt[1] <= _000_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       bit_cnt[2] <= _000_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_valid1 <= _008_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       RxValid_o <= _009_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       se0_r <= se0;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       byte_err <= _002_;
   assign hold_reg = DataIn_o;
@@ -789,51 +642,28 @@ module usb_rx_phy(clk, rst, fs_ce, rxd, rxdp, rxdn, RxValid_o, RxActive_o, RxErr
   assign rxdp_s1 = LineState[0];
 endmodule
 
-(* src = "rtl/usb_tx_phy.v:77" *)
 module usb_tx_phy(clk, rst, fs_ce, phy_mode, txdp, txdn, txoe, DataOut_i, TxValid_i, TxReady_o);
-  (* src = "rtl/usb_tx_phy.v:149" *)
   wire _000_;
-  (* src = "rtl/usb_tx_phy.v:299" *)
   wire _001_;
-  (* src = "rtl/usb_tx_phy.v:310" *)
   wire _002_;
-  (* src = "rtl/usb_tx_phy.v:319" *)
   wire _003_;
-  (* src = "rtl/usb_tx_phy.v:328" *)
   wire _004_;
-  (* src = "rtl/usb_tx_phy.v:338" *)
   wire _005_;
-  (* src = "rtl/usb_tx_phy.v:204" *)
   wire [2:0] _006_;
-  (* src = "rtl/usb_tx_phy.v:188" *)
   wire _007_;
-  (* src = "rtl/usb_tx_phy.v:237" *)
   wire [7:0] _008_;
-  (* src = "rtl/usb_tx_phy.v:252" *)
   wire [2:0] _009_;
-  (* src = "rtl/usb_tx_phy.v:269" *)
   wire _010_;
-  (* src = "rtl/usb_tx_phy.v:283" *)
   wire _011_;
-  (* src = "rtl/usb_tx_phy.v:214" *)
   wire _012_;
-  (* src = "rtl/usb_tx_phy.v:228" *)
   wire _013_;
-  (* src = "rtl/usb_tx_phy.v:413" *)
   wire [2:0] _014_;
-  (* src = "rtl/usb_tx_phy.v:164" *)
   wire _015_;
-  (* src = "rtl/usb_tx_phy.v:175" *)
   wire _016_;
-  (* src = "rtl/usb_tx_phy.v:397" *)
   wire _017_;
-  (* src = "rtl/usb_tx_phy.v:386" *)
   wire _018_;
-  (* src = "rtl/usb_tx_phy.v:372" *)
   wire _019_;
-  (* src = "rtl/usb_tx_phy.v:354" *)
   wire _020_;
-  (* src = "rtl/usb_tx_phy.v:363" *)
   wire _021_;
   wire _022_;
   wire _023_;
@@ -999,77 +829,43 @@ module usb_tx_phy(clk, rst, fs_ce, phy_mode, txdp, txdn, txoe, DataOut_i, TxVali
   wire _183_;
   wire _184_;
   wire _185_;
-  (* src = "rtl/usb_tx_phy.v:92" *)
   input [7:0] DataOut_i;
-  (* src = "rtl/usb_tx_phy.v:94" *)
   output TxReady_o;
   reg TxReady_o;
-  (* src = "rtl/usb_tx_phy.v:93" *)
   input TxValid_i;
-  (* src = "rtl/usb_tx_phy.v:132" *)
   reg append_eop;
-  (* src = "rtl/usb_tx_phy.v:133" *)
   reg append_eop_sync1;
-  (* src = "rtl/usb_tx_phy.v:134" *)
   reg append_eop_sync2;
-  (* src = "rtl/usb_tx_phy.v:135" *)
   reg append_eop_sync3;
-  (* src = "rtl/usb_tx_phy.v:136" *)
   reg append_eop_sync4;
-  (* src = "rtl/usb_tx_phy.v:116" *)
   reg [2:0] bit_cnt;
-  (* src = "rtl/usb_tx_phy.v:87" *)
   input clk;
-  (* src = "rtl/usb_tx_phy.v:122" *)
   reg data_done;
-  (* src = "rtl/usb_tx_phy.v:127" *)
   wire eop_done;
-  (* src = "rtl/usb_tx_phy.v:89" *)
   input fs_ce;
-  (* src = "rtl/usb_tx_phy.v:117" *)
   reg [7:0] hold_reg;
-  (* src = "rtl/usb_tx_phy.v:118" *)
   reg [7:0] hold_reg_d;
-  (* src = "rtl/usb_tx_phy.v:126" *)
   reg ld_data;
-  (* src = "rtl/usb_tx_phy.v:112" *)
   wire ld_data_d;
-  (* src = "rtl/usb_tx_phy.v:128" *)
   reg [2:0] one_cnt;
-  (* src = "rtl/usb_tx_phy.v:90" *)
   input phy_mode;
-  (* src = "rtl/usb_tx_phy.v:88" *)
   input rst;
-  (* src = "rtl/usb_tx_phy.v:130" *)
   reg sd_bs_o;
-  (* src = "rtl/usb_tx_phy.v:131" *)
   reg sd_nrzi_o;
-  (* src = "rtl/usb_tx_phy.v:120" *)
   reg sd_raw_o;
-  (* src = "rtl/usb_tx_phy.v:123" *)
   reg sft_done;
-  (* src = "rtl/usb_tx_phy.v:124" *)
   reg sft_done_r;
-  (* src = "rtl/usb_tx_phy.v:109" *)
   reg [2:0] state;
-  (* src = "rtl/usb_tx_phy.v:114" *)
   reg tx_ip;
-  (* src = "rtl/usb_tx_phy.v:115" *)
   reg tx_ip_sync;
-  (* src = "rtl/usb_tx_phy.v:110" *)
   wire tx_ready_d;
-  (* src = "rtl/usb_tx_phy.v:91" *)
   output txdn;
   reg txdn;
-  (* src = "rtl/usb_tx_phy.v:91" *)
   output txdp;
   reg txdp;
-  (* src = "rtl/usb_tx_phy.v:91" *)
   output txoe;
   reg txoe;
-  (* src = "rtl/usb_tx_phy.v:138" *)
   reg txoe_r1;
-  (* src = "rtl/usb_tx_phy.v:138" *)
   reg txoe_r2;
   assign _178_ = ~state[2];
   assign _179_ = ~state[1];
@@ -1271,139 +1067,94 @@ module usb_tx_phy(clk, rst, fs_ce, phy_mode, txdp, txdn, txoe, DataOut_i, TxVali
   assign _176_ = state[2] & _048_;
   assign _177_ = _154_ ? _175_ : _176_;
   assign _014_[2] = _177_ & rst;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       TxReady_o <= _000_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       ld_data <= ld_data_d;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_ip <= _015_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_ip_sync <= _016_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       data_done <= _007_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       bit_cnt[0] <= _006_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       bit_cnt[1] <= _006_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       bit_cnt[2] <= _006_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       sd_raw_o <= _012_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       sft_done <= _013_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       sft_done_r <= sft_done;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       hold_reg[0] <= _008_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       hold_reg[1] <= _008_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       hold_reg[2] <= _008_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       hold_reg[3] <= _008_[3];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       hold_reg[4] <= _008_[4];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       hold_reg[5] <= _008_[5];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       hold_reg[6] <= _008_[6];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       hold_reg[7] <= _008_[7];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       hold_reg_d[0] <= hold_reg[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       hold_reg_d[1] <= hold_reg[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       hold_reg_d[2] <= hold_reg[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       hold_reg_d[3] <= hold_reg[3];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       hold_reg_d[4] <= hold_reg[4];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       hold_reg_d[5] <= hold_reg[5];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       hold_reg_d[6] <= hold_reg[6];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       hold_reg_d[7] <= hold_reg[7];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       one_cnt[0] <= _009_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       one_cnt[1] <= _009_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       one_cnt[2] <= _009_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       sd_bs_o <= _010_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       sd_nrzi_o <= _011_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       append_eop <= _001_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       append_eop_sync1 <= _002_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       append_eop_sync2 <= _003_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       append_eop_sync3 <= _004_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       append_eop_sync4 <= _005_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       txoe_r1 <= _020_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       txoe_r2 <= _021_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       txoe <= _019_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       txdp <= _018_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       txdn <= _017_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       state[0] <= _014_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       state[1] <= _014_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       state[2] <= _014_[2];
   assign eop_done = append_eop_sync3;

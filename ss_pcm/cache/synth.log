@@ -37,8 +37,6 @@ Removed 0 unused modules.
 
 -- Executing script file `../scripts/generic.ys' --
 
--- Executing script file `../scripts/generic-no-fsm.ys' --
-
 3. Executing HIERARCHY pass (managing design hierarchy).
 
 4. Executing PROC pass (convert processes to netlists).
@@ -681,21 +679,21 @@ Replaced 0 DFF cells.
 Finding unused cells or wires in module \pcm_slv_top..
   removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[0].mux.V[1].gate'.
   removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[0].mux.V[3].gate'.
+  removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[2].mux.V[5].gate'.
+  removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[1].mux.V[5].gate'.
   removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[0].mux.V[5].gate'.
   removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[0].mux.V[7].gate'.
-  removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[2].mux.V[5].gate'.
-  removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[2].mux.V[2].gate'.
-  removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[2].mux.V[7].gate'.
-  removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[2].mux.V[4].gate'.
-  removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[1].mux.V[2].gate'.
-  removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[1].mux.V[1].gate'.
-  removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[1].mux.V[5].gate'.
-  removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[1].mux.V[7].gate'.
-  removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[1].mux.V[3].gate'.
-  removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[1].mux.V[6].gate'.
-  removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[2].mux.V[3].gate'.
   removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[2].mux.V[6].gate'.
+  removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[2].mux.V[4].gate'.
   removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[2].mux.V[1].gate'.
+  removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[2].mux.V[3].gate'.
+  removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[2].mux.V[7].gate'.
+  removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[1].mux.V[6].gate'.
+  removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[1].mux.V[3].gate'.
+  removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[1].mux.V[1].gate'.
+  removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[1].mux.V[2].gate'.
+  removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[1].mux.V[7].gate'.
+  removing unused `$_MUX_' cell `$shr$rtl/pcm_slv_top.v:145$11.V[2].mux.V[2].gate'.
   removing unused `$_AND_' cell `$add$rtl/pcm_slv_top.v:185$25.alu.V[3].adder.gate3'.
   removed 347 unused temporary wires.
 
@@ -731,19 +729,19 @@ Finding unused cells or wires in module \pcm_slv_top..
 
 10. Executing ABC pass (technology mapping using ABC).
 
-10.1. Extracting gate logic of module `\pcm_slv_top' to `/tmp/yosys-abc-hp8oWj/input.v'..
+10.1. Extracting gate logic of module `\pcm_slv_top' to `/tmp/yosys-abc-nOH2OK/input.v'..
 Extracted 192 gates and 297 wires to a logic network with 103 inputs and 90 outputs.
 
 10.1.1. Executing ABC.
-ABC: ABC command line: "read_verilog /tmp/yosys-abc-hp8oWj/input.v; read_library /tmp/yosys-abc-hp8oWj/stdcells.genlib; map; write_verilog /tmp/yosys-abc-hp8oWj/output.v".
+ABC: ABC command line: "read_verilog /tmp/yosys-abc-nOH2OK/input.v; read_library /tmp/yosys-abc-nOH2OK/stdcells.genlib; map; write_verilog /tmp/yosys-abc-nOH2OK/output.v".
 ABC: There is no hierarchy information.
 ABC: The number of gates read = 8.
-ABC: Read 8 gates from file "/tmp/yosys-abc-hp8oWj/stdcells.genlib".
+ABC: Read 8 gates from file "/tmp/yosys-abc-nOH2OK/stdcells.genlib".
 ABC: Selected 8 functionally unique gates. Time =     0.00 sec
 ABC: Created 4 rules and 4 matches. Time =     0.00 sec
 ABC: Warning: The network was strashed and balanced before mapping.
-ABC: A simple supergate library is derived from gate library "/tmp/yosys-abc-hp8oWj/stdcells.genlib".
-ABC: Loaded 9 unique 5-input supergates from "/tmp/yosys-abc-hp8oWj/stdcells.super".  Time =     0.00 sec
+ABC: A simple supergate library is derived from gate library "/tmp/yosys-abc-nOH2OK/stdcells.genlib".
+ABC: Loaded 9 unique 5-input supergates from "/tmp/yosys-abc-nOH2OK/stdcells.super".  Time =     0.00 sec
 
 10.1.2. Re-integrating ABC results.
 ABC RESULTS:               AND cells:       63
@@ -755,13 +753,13 @@ ABC RESULTS:        internal signals:      104
 ABC RESULTS:           input signals:      103
 ABC RESULTS:          output signals:       90
 
-10.1.3. Removing temp directory `/tmp/yosys-abc-hp8oWj':
-Removing `/tmp/yosys-abc-hp8oWj/input.v'.
-Removing `/tmp/yosys-abc-hp8oWj/output.v'.
-Removing `/tmp/yosys-abc-hp8oWj/stdcells.genlib'.
-Removing `/tmp/yosys-abc-hp8oWj/stdcells.genlib_temp'.
-Removing `/tmp/yosys-abc-hp8oWj/stdcells.super'.
-Removing `/tmp/yosys-abc-hp8oWj'.
+10.1.3. Removing temp directory `/tmp/yosys-abc-nOH2OK':
+Removing `/tmp/yosys-abc-nOH2OK/input.v'.
+Removing `/tmp/yosys-abc-nOH2OK/output.v'.
+Removing `/tmp/yosys-abc-nOH2OK/stdcells.genlib'.
+Removing `/tmp/yosys-abc-nOH2OK/stdcells.genlib_temp'.
+Removing `/tmp/yosys-abc-nOH2OK/stdcells.super'.
+Removing `/tmp/yosys-abc-nOH2OK'.
 
 11. Executing OPT pass (performing simple optimizations).
 
@@ -807,7 +805,7 @@ Finding unused cells or wires in module \pcm_slv_top..
 11.11. Finished OPT passes. (There is nothing left to do.)
 
 12. Executing Verilog backend.
-Full command line: write_verilog output/synth.v
+Full command line: write_verilog -noattr output/synth.v
 Dumping module `\pcm_slv_top'.
   renaming `$0\pcm_sync_r1[0:0]' to `_000_'.
   renaming `$0\pcm_sync_r2[0:0]' to `_001_'.

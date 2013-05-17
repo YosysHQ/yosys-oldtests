@@ -1,30 +1,16 @@
-(* src = "rtl/pcm_slv_top.v:76" *)
 module pcm_slv_top(clk, rst, ssel, pcm_clk_i, pcm_sync_i, pcm_din_i, pcm_dout_o, din_i, dout_o, re_i, we_i);
-  (* src = "rtl/pcm_slv_top.v:138" *)
   wire _000_;
-  (* src = "rtl/pcm_slv_top.v:144" *)
   wire _001_;
-  (* src = "rtl/pcm_slv_top.v:141" *)
   wire [7:0] _002_;
-  (* src = "rtl/pcm_slv_top.v:150" *)
   wire _003_;
-  (* src = "rtl/pcm_slv_top.v:209" *)
   wire [15:0] _004_;
-  (* src = "rtl/pcm_slv_top.v:214" *)
   wire [15:0] _005_;
-  (* src = "rtl/pcm_slv_top.v:201" *)
   wire _006_;
-  (* src = "rtl/pcm_slv_top.v:182" *)
   wire [3:0] _007_;
-  (* src = "rtl/pcm_slv_top.v:166" *)
   wire _008_;
-  (* src = "rtl/pcm_slv_top.v:194" *)
   wire _009_;
-  (* src = "rtl/pcm_slv_top.v:160" *)
   wire [7:0] _010_;
-  (* src = "rtl/pcm_slv_top.v:163" *)
   wire [7:0] _011_;
-  (* src = "rtl/pcm_slv_top.v:173" *)
   wire [15:0] _012_;
   wire _013_;
   wire _014_;
@@ -128,64 +114,35 @@ module pcm_slv_top(clk, rst, ssel, pcm_clk_i, pcm_sync_i, pcm_din_i, pcm_dout_o,
   wire _112_;
   wire _113_;
   wire _114_;
-  (* src = "rtl/pcm_slv_top.v:86" *)
   input clk;
-  (* src = "rtl/pcm_slv_top.v:90" *)
   input [7:0] din_i;
-  (* src = "rtl/pcm_slv_top.v:91" *)
   output [7:0] dout_o;
-  (* src = "rtl/pcm_slv_top.v:100" *)
   reg pclk_r;
-  (* src = "rtl/pcm_slv_top.v:100" *)
   reg pclk_s;
-  (* src = "rtl/pcm_slv_top.v:100" *)
   reg pclk_t;
-  (* src = "rtl/pcm_slv_top.v:88" *)
   input pcm_clk_i;
-  (* src = "rtl/pcm_slv_top.v:88" *)
   input pcm_din_i;
-  (* src = "rtl/pcm_slv_top.v:89" *)
   output pcm_dout_o;
   reg pcm_dout_o;
-  (* src = "rtl/pcm_slv_top.v:88" *)
   input pcm_sync_i;
-  (* src = "rtl/pcm_slv_top.v:103" *)
   reg pcm_sync_r1;
-  (* src = "rtl/pcm_slv_top.v:103" *)
   reg pcm_sync_r2;
-  (* src = "rtl/pcm_slv_top.v:103" *)
   reg pcm_sync_r3;
-  (* src = "rtl/pcm_slv_top.v:114" *)
   reg [7:0] psa;
-  (* src = "rtl/pcm_slv_top.v:102" *)
   reg psync;
-  (* src = "rtl/pcm_slv_top.v:92" *)
   input re_i;
-  (* src = "rtl/pcm_slv_top.v:86" *)
   input rst;
-  (* src = "rtl/pcm_slv_top.v:110" *)
   reg [15:0] rx_hold_reg;
-  (* src = "rtl/pcm_slv_top.v:110" *)
   reg [15:0] rx_reg;
-  (* src = "rtl/pcm_slv_top.v:112" *)
   reg rxd;
-  (* src = "rtl/pcm_slv_top.v:112" *)
   reg rxd_t;
-  (* src = "rtl/pcm_slv_top.v:87" *)
   input [2:0] ssel;
-  (* src = "rtl/pcm_slv_top.v:108" *)
   reg [3:0] tx_cnt;
-  (* src = "rtl/pcm_slv_top.v:104" *)
   reg tx_go;
-  (* src = "rtl/pcm_slv_top.v:113" *)
   reg tx_go_r1;
-  (* src = "rtl/pcm_slv_top.v:107" *)
   reg [7:0] tx_hold_byte_h;
-  (* src = "rtl/pcm_slv_top.v:107" *)
   reg [7:0] tx_hold_byte_l;
-  (* src = "rtl/pcm_slv_top.v:106" *)
   wire [15:0] tx_hold_reg;
-  (* src = "rtl/pcm_slv_top.v:93" *)
   input [1:0] we_i;
   assign _013_ = ~pcm_sync_r3;
   assign _003_ = _013_ & pcm_sync_r2;
@@ -379,295 +336,208 @@ module pcm_slv_top(clk, rst, ssel, pcm_clk_i, pcm_sync_i, pcm_din_i, pcm_dout_o,
   assign dout_o[5] = re_i ? rx_reg[13] : rx_reg[5];
   assign dout_o[6] = re_i ? rx_reg[14] : rx_reg[6];
   assign dout_o[7] = re_i ? rx_reg[15] : rx_reg[7];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       pclk_s <= pclk_t;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       pclk_r <= pclk_s;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       pcm_sync_r1 <= _000_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       psa[0] <= _002_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       psa[1] <= _002_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       psa[2] <= _002_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       psa[3] <= _002_[3];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       psa[4] <= _002_[4];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       psa[5] <= _002_[5];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       psa[6] <= _002_[6];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       psa[7] <= _002_[7];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       pcm_sync_r2 <= _001_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       pcm_sync_r3 <= pcm_sync_r2;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       psync <= _003_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_hold_byte_h[0] <= _010_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_hold_byte_h[1] <= _010_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_hold_byte_h[2] <= _010_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_hold_byte_h[3] <= _010_[3];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_hold_byte_h[4] <= _010_[4];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_hold_byte_h[5] <= _010_[5];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_hold_byte_h[6] <= _010_[6];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_hold_byte_h[7] <= _010_[7];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_hold_byte_l[0] <= _011_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_hold_byte_l[1] <= _011_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_hold_byte_l[2] <= _011_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_hold_byte_l[3] <= _011_[3];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_hold_byte_l[4] <= _011_[4];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_hold_byte_l[5] <= _011_[5];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_hold_byte_l[6] <= _011_[6];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_hold_byte_l[7] <= _011_[7];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_go <= _008_;
   reg \tx_hold_reg_reg[0] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \tx_hold_reg_reg[0]  <= _012_[0];
   assign tx_hold_reg[0] = \tx_hold_reg_reg[0] ;
   reg \tx_hold_reg_reg[10] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \tx_hold_reg_reg[10]  <= _012_[10];
   assign tx_hold_reg[10] = \tx_hold_reg_reg[10] ;
   reg \tx_hold_reg_reg[11] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \tx_hold_reg_reg[11]  <= _012_[11];
   assign tx_hold_reg[11] = \tx_hold_reg_reg[11] ;
   reg \tx_hold_reg_reg[12] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \tx_hold_reg_reg[12]  <= _012_[12];
   assign tx_hold_reg[12] = \tx_hold_reg_reg[12] ;
   reg \tx_hold_reg_reg[13] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \tx_hold_reg_reg[13]  <= _012_[13];
   assign tx_hold_reg[13] = \tx_hold_reg_reg[13] ;
   reg \tx_hold_reg_reg[14] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \tx_hold_reg_reg[14]  <= _012_[14];
   assign tx_hold_reg[14] = \tx_hold_reg_reg[14] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       pcm_dout_o <= _012_[15];
   reg \tx_hold_reg_reg[1] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \tx_hold_reg_reg[1]  <= _012_[1];
   assign tx_hold_reg[1] = \tx_hold_reg_reg[1] ;
   reg \tx_hold_reg_reg[2] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \tx_hold_reg_reg[2]  <= _012_[2];
   assign tx_hold_reg[2] = \tx_hold_reg_reg[2] ;
   reg \tx_hold_reg_reg[3] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \tx_hold_reg_reg[3]  <= _012_[3];
   assign tx_hold_reg[3] = \tx_hold_reg_reg[3] ;
   reg \tx_hold_reg_reg[4] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \tx_hold_reg_reg[4]  <= _012_[4];
   assign tx_hold_reg[4] = \tx_hold_reg_reg[4] ;
   reg \tx_hold_reg_reg[5] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \tx_hold_reg_reg[5]  <= _012_[5];
   assign tx_hold_reg[5] = \tx_hold_reg_reg[5] ;
   reg \tx_hold_reg_reg[6] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \tx_hold_reg_reg[6]  <= _012_[6];
   assign tx_hold_reg[6] = \tx_hold_reg_reg[6] ;
   reg \tx_hold_reg_reg[7] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \tx_hold_reg_reg[7]  <= _012_[7];
   assign tx_hold_reg[7] = \tx_hold_reg_reg[7] ;
   reg \tx_hold_reg_reg[8] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \tx_hold_reg_reg[8]  <= _012_[8];
   assign tx_hold_reg[8] = \tx_hold_reg_reg[8] ;
   reg \tx_hold_reg_reg[9] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       \tx_hold_reg_reg[9]  <= _012_[9];
   assign tx_hold_reg[9] = \tx_hold_reg_reg[9] ;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_cnt[0] <= _007_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_cnt[1] <= _007_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_cnt[2] <= _007_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_cnt[3] <= _007_[3];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       tx_go_r1 <= _009_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rxd_t <= _006_;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rxd <= rxd_t;
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_hold_reg[0] <= _004_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_hold_reg[10] <= _004_[10];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_hold_reg[11] <= _004_[11];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_hold_reg[12] <= _004_[12];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_hold_reg[13] <= _004_[13];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_hold_reg[14] <= _004_[14];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_hold_reg[15] <= _004_[15];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_hold_reg[1] <= _004_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_hold_reg[2] <= _004_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_hold_reg[3] <= _004_[3];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_hold_reg[4] <= _004_[4];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_hold_reg[5] <= _004_[5];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_hold_reg[6] <= _004_[6];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_hold_reg[7] <= _004_[7];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_hold_reg[8] <= _004_[8];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_hold_reg[9] <= _004_[9];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_reg[0] <= _005_[0];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_reg[10] <= _005_[10];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_reg[11] <= _005_[11];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_reg[12] <= _005_[12];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_reg[13] <= _005_[13];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_reg[14] <= _005_[14];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_reg[15] <= _005_[15];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_reg[1] <= _005_[1];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_reg[2] <= _005_[2];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_reg[3] <= _005_[3];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_reg[4] <= _005_[4];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_reg[5] <= _005_[5];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_reg[6] <= _005_[6];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_reg[7] <= _005_[7];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_reg[8] <= _005_[8];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       rx_reg[9] <= _005_[9];
-  (* src = "<stdcells.v>:1282" *)
   always @(posedge clk)
       pclk_t <= pcm_clk_i;
   assign tx_hold_reg[15] = pcm_dout_o;

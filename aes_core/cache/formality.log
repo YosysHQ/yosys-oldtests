@@ -15,8 +15,8 @@ controlling such use and disclosure.
 
    * Please refer to the Formality Release Notes for details and additional enhancements
 
-Hostname: morpheus2 (amd64)
-Current time: Thu May 16 16:48:14 2013
+Hostname: morpheus5 (amd64)
+Current time: Fri May 17 15:00:00 2013
 
 Loading db file '/opt/eda/iac/tools/fm/2009_06/libraries/syn/gtech.db'
 set hdlin_ignore_full_case false
@@ -105,7 +105,7 @@ Failing (not equivalent)       0       0       0       0       0       0       0
 1
 exit
 
-Maximum memory usage for this session: 129600 KB
-CPU usage for this session: 39.23 seconds
+Maximum memory usage for this session: 129604 KB
+CPU usage for this session: 38.59 seconds
 
 Thank you for using Formality (R)!
