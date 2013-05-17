@@ -1,0 +1,20 @@
+
+read_verilog rtl/k68_appl.v
+read_verilog rtl/k68_cpu.v
+read_verilog rtl/k68_decode.v
+read_verilog rtl/k68_execute.v
+read_verilog rtl/k68_fetch.v
+read_verilog rtl/k68_load.v
+read_verilog rtl/k68_prims.v
+read_verilog rtl/k68_regbank.v
+read_verilog rtl/k68_sasc.v
+read_verilog rtl/k68_soc.v
+read_verilog rtl/sasc/sasc_brg.v
+read_verilog rtl/sasc/sasc_fifo4.v
+read_verilog rtl/sasc/sasc_top.v
+
+hierarchy -top k68_soc
+script ../scripts/generic.ys
+
+write_verilog -noattr output/synth.v
+

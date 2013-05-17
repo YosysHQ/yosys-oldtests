@@ -37,9 +37,9 @@ Test taken from IWLS2005 (http://iwls.org/iwls2005/benchmarks.html):
 	* systemcaes
 	* usb_phy
 
-Tests taken from other sources (TBD):
+Tests taken from OpenCores (http://opencores.org/):
 
 	* Or1200
-	* k68_vltor
-	* openmsp430
+	* OpenMSP430
+	* k68
 
