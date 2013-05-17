@@ -6,5 +6,5 @@ read_verilog rtl/i2c_master_top.v
 hierarchy -top i2c_master_top
 script ../scripts/generic.ys
 
-write_verilog output/synth.v
+write_verilog -noattr output/synth.v
 

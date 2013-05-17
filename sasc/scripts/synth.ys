@@ -6,5 +6,5 @@ read_verilog rtl/sasc_top.v
 hierarchy -top sasc_top
 script ../scripts/generic.ys
 
-write_verilog output/synth.v
+write_verilog -noattr output/synth.v
 

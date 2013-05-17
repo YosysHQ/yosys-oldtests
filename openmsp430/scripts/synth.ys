@@ -23,5 +23,5 @@ read_verilog rtl/openMSP430.v
 hierarchy -top openMSP430
 script ../scripts/generic-fsm.ys
 
-write_verilog output/synth.v
+write_verilog -noattr output/synth.v
 

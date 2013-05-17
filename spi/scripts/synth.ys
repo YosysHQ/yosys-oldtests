@@ -6,5 +6,5 @@ read_verilog rtl/spi_top.v
 hierarchy -top spi_top
 script ../scripts/generic.ys
 
-write_verilog output/synth.v
+write_verilog -noattr output/synth.v
 

@@ -9,5 +9,5 @@ read_verilog rtl/aes_sbox.v
 hierarchy -top aes_cipher_top
 script ../scripts/generic.ys
 
-write_verilog output/synth.v
+write_verilog -noattr output/synth.v
 

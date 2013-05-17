@@ -10,5 +10,5 @@ read_verilog rtl/word_mixcolum.v
 hierarchy -top aes
 script ../scripts/generic.ys
 
-write_verilog output/synth.v
+write_verilog -noattr output/synth.v
 

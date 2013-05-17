@@ -6,5 +6,5 @@ read_verilog rtl/usb_tx_phy.v
 hierarchy -top usb_phy
 script ../scripts/generic.ys
 
-write_verilog output/synth.v
+write_verilog -noattr output/synth.v
 
