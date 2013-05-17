@@ -28,6 +28,7 @@ set_top r:/WORK/openMSP430
 
 read_verilog -container i -libname WORK -01 output/synth.v
 read_verilog -container i -technology_library -libname TECH_WORK -01 ../scripts/sim_mul.v
+read_verilog -container i -technology_library -libname TECH_WORK -01 ../scripts/sim_stdcells.v
 set_top i:/WORK/openMSP430
 
 source output/fsm_info.txt
