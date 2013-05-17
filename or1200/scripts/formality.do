@@ -46,7 +46,7 @@ read_verilog -container r -libname WORK -01 rtl/or1200_wbmux.v
 set_top r:/WORK/or1200_top
 
 read_verilog -container i -libname WORK -01 output/synth.v
-read_verilog -container i -technology_library -libname TECH_WORK -01 ../scripts/stdcells_sim.v
+read_verilog -container i -technology_library -libname TECH_WORK -01 ../scripts/sim_stdcells.v
 set_top i:/WORK/or1200_top
 
 verify
