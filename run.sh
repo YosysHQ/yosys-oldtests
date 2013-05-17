@@ -13,7 +13,7 @@ mode=$1; shift
 list="$*"
 
 if [ "$list" = "" ]; then
-	list="aes_core i2c k68 openmsp430 or1200 sasc simple_spi spi ss_pcm systemcaes usb_phy"
+	list="aes_core i2c openmsp430 or1200 sasc simple_spi spi ss_pcm systemcaes usb_phy"
 fi
 
 for t in $list; do
