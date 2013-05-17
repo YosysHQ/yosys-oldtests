@@ -76,12 +76,12 @@
 //
 // Do not implement Data cache
 //
-//`define OR1200_NO_DC
+`define OR1200_NO_DC
 
 //
 // Do not implement Insn cache
 //
-//`define OR1200_NO_IC
+`define OR1200_NO_IC
 
 //
 // Do not implement Data MMU
