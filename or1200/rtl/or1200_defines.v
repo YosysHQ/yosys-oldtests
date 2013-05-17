@@ -160,13 +160,13 @@
 // Size/type of insn/data cache if implemented
 // (consider available FPGA memory resources)
 //
-//`define OR1200_IC_1W_512B
+`define OR1200_IC_1W_512B
 //`define OR1200_IC_1W_4KB
-`define OR1200_IC_1W_8KB
+//`define OR1200_IC_1W_8KB
 //`define OR1200_IC_1W_16KB
 //`define OR1200_IC_1W_32KB
-//`define OR1200_DC_1W_4KB
-`define OR1200_DC_1W_8KB
+`define OR1200_DC_1W_4KB
+//`define OR1200_DC_1W_8KB
 //`define OR1200_DC_1W_16KB
 //`define OR1200_DC_1W_32KB
 
