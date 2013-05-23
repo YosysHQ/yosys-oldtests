@@ -56,6 +56,16 @@ case "$mode" in
 		done | expand -t15
 		echo; echo
 		;;
+	
+	gatecount)
+		for t in $list; do
+			top=$( gawk '$1 == "hierarchy" { print $3; }' $t/scripts/synth.ys )
+			yosys -ql logfile.tmp $t/output/synth.v -p " hierarchy -top $top; proc; techmap; flatten $top; hierarchy -top $top; abc; opt; select -count */c:*"
+			echo -e "$t\\t$( egrep '^[0-9]+ objects.' logfile.tmp | tail -n1; )" | expand -t15
+			rm -f logfile.tmp
+		done
+		;;
+		
 
 	copy-to-cache)
 		for t in $list; do
