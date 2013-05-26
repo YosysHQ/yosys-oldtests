@@ -59,13 +59,13 @@ case "$mode" in
 	
 	gatecount)
 		for t in $list; do
+			echo -en "$t\\t" | expand -t15
 			top=$( gawk '$1 == "hierarchy" { print $3; }' $t/scripts/synth.ys )
-			yosys -ql logfile.tmp $t/output/synth.v -p " hierarchy -top $top; proc; techmap; flatten $top; hierarchy -top $top; abc; opt; select -count */c:*"
-			echo -e "$t\\t$( egrep '^[0-9]+ objects.' logfile.tmp | tail -n1; )" | expand -t15
-			rm -f logfile.tmp
+			rtl_files=$( gawk '$1 == "read_verilog" { print "'$t/'" $2; }' $t/scripts/synth.ys )
+			yosys -ql $t/output/gatecount.log $rtl_files -p "hierarchy -top $top; proc; opt; memory; opt; techmap; opt; abc; opt; flatten $top; hierarchy -top $top; abc; opt; select -count */c:*"
+			echo $( egrep '^[0-9]+ objects.' $t/output/gatecount.log | tail -n1 | cut -f1 -d' ' )
 		done
 		;;
-		
 
 	copy-to-cache)
 		for t in $list; do
